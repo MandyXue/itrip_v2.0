@@ -102,55 +102,87 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-            <div class="row">
-                <div class="col-md-7">
-                    <h1 class="trip-header text-right">
-                        <c:if test="${requestScope.type=='spot'}">
-                            <c:out value="${requestScope.spotDetail.name}"/>
-                        </c:if>
-                        <c:if test="${requestScope.type=='food'}">
-                            <c:out value="${requestScope.foodDetail.name}"/>
-                        </c:if>
-                    </h1>
-                </div>
-                <div class="col-md-5">
-                    <h1 class="trip-header text-left">
-                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
-                        </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form action="upload?spotfood=${spotfood}&type=${type}" enctype="multipart/form-data" method="post">
-                                            <%--<div class="form-group">--%>
-                                                <%--<label for="recipient-name" class="control-label">Recipient:</label>--%>
-                                                <%--<input type="text" class="form-control" id="recipient-name">--%>
-                                            <%--</div>--%>
-                                            <div class="form-group">
-                                                <label for="message-text" class="control-label">Upload your picture:</label>
-                                                <input type="file" name="file1" id="file1"><br/><br/>
-                                                <label for="message-text" class="control-label">Description:</label>
-                                                <textarea class="form-control" id="message-text"name="description" rows="10" cols="30">
-                                                    ${requestScope.description}
-                                                </textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary" name="upload" value="上传">Upload</button>
+            <%--get session--%>
+            <c:if test="${sessionScope.get('userId')!=null}">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1 class="trip-header text-right">
+                            <c:if test="${requestScope.type=='spot'}">
+                                <c:out value="${requestScope.spotDetail.name}"/>
+                            </c:if>
+                            <c:if test="${requestScope.type=='food'}">
+                                <c:out value="${requestScope.foodDetail.name}"/>
+                            </c:if>
+                        </h1>
+                    </div>
+                    <div class="col-md-5">
+                        <h1 class="trip-header text-left">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
+                            </button>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <c:choose>
+                                                <c:when test="${requestScope.type=='spot'}">
+                                                    <form action="upload?spotfood=<c:out value="${requestScope.spotDetail.name}"/>&type=spot" enctype="multipart/form-data" method="post">
+                                                </c:when>
+                                                <c:when test="${requestScope.type=='food'}">
+                                                    <form action="upload?spotfood=<c:out value="${requestScope.foodDetail.name}"/>&type=food" enctype="multipart/form-data" method="post">
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <form action="upload?spotfood=unknown&type=unknown" enctype="multipart/form-data" method="post">
+                                                </c:otherwise>
+                                            </c:choose>
+                                                        <div class="form-group">
+                                                            <label for="message-text" class="control-label">Upload your picture:</label>
+                                                            <input type="file" name="file1" id="file1"><br/><br/>
+                                                            <label for="message-text" class="control-label">Description:</label>
+                                                        <textarea class="form-control" id="message-text"name="description" rows="10" cols="30">
+                                                            <c:choose>
+                                                                <c:when test="${requestScope.type=='spot'}">
+                                                                    <c:out value="${requestScope.spotDetail.description}"/>
+                                                                </c:when>
+                                                                <c:when test="${requestScope.type=='food'}">
+                                                                    <c:out value="${requestScope.foodDetail.description}"/>
+                                                                </c:when>
+                                                                <c:otherwise>
+                                                                    unknown
+                                                                </c:otherwise>
+                                                                </c:choose>
+                                                        </textarea>
+                                                            <br/><br/>
+                                                            <hr class="featurette-divider">
+                                                            <input type="submit" name="upload" value="Upload"><br/>
+                                                        </div>
+                                                    </form>
+                                        </div>
+                                        <%--<div class="modal-footer">--%>
+                                            <%--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>--%>
+                                            <%--<button type="button" class="btn btn-primary" name="upload" value="上传">Upload</button>--%>
+                                        <%--</div>--%>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </h1>
+                        </h1>
+                    </div>
                 </div>
-            </div>
+            </c:if>
+            <c:if test="${sessionScope.get('userId')==null}">
+                <h1 class="trip-header text-center">
+                    <c:if test="${requestScope.type=='spot'}">
+                        <c:out value="${requestScope.spotDetail.name}"/>
+                    </c:if>
+                    <c:if test="${requestScope.type=='food'}">
+                        <c:out value="${requestScope.foodDetail.name}"/>
+                    </c:if>
+                </h1>
+            </c:if>
             <div class="blog-post">
                 <div class="carousel-container">
                     <div id="carousel" class="carousel slide" data-ride="carousel">

@@ -285,3 +285,13 @@ body {
 .col-md-10 .col-md-5 {
     margin-top: -4px;
 }
+
+.control-label{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+form > input{
+    font-size: 25px;
+    font-weight: bold;
+}
