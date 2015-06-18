@@ -74,4 +74,10 @@ public class SpotService {
         spotDao.update(spot2);
         return spotThumbs;
     }
+
+    public void updateDsp(SpotEntity spotEntity,String description){
+        SpotEntity spotEntity1=spotEntity;
+        spotEntity1.setDescription(description);
+        spotDao.update(spotEntity1);
+    }
 }

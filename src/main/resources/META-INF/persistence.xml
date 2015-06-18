@@ -8,6 +8,7 @@
         <class>entity.UserFoodEntity</class>
         <class>entity.UserSpotEntity</class>
         <class>entity.UsertableEntity</class>
+        <class>entity.UploadEntity</class>
         <properties>
             <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/itripdb"/>
             <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>

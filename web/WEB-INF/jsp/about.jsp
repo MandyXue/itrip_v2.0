@@ -183,7 +183,7 @@
             <p class="lead">Click on different provinces to view different spots.</p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block about-pic" src="${bp}/images/about/about-1.jpg"
                  alt="Generic placeholder image">
         </div>
     </div>
@@ -198,7 +198,7 @@
                 for what you want. You can also add your own photo to our website.</p>
         </div>
         <div class="col-md-5 col-md-pull-7">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block about-pic" src="${bp}/images/about/about-2.jpg"
                  alt="Generic placeholder image">
         </div>
     </div>
@@ -212,7 +212,7 @@
             <p class="lead">On the right hand bar, you can see delicious food from the same province. </p>
         </div>
         <div class="col-md-5">
-            <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto"
+            <img class="featurette-image img-responsive center-block about-pic" src="${bp}/images/about/about-3.jpg"
                  alt="Generic placeholder image">
         </div>
     </div>

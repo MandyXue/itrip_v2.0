@@ -42,5 +42,9 @@ public class FoodService {
         return food2.getThumbs();
     }
 
-
+    public void updateDsp(FoodEntity foodEntity,String description){
+        FoodEntity foodEntity1=foodEntity;
+        foodEntity1.setDescription(description);
+        foodDao.update(foodEntity1);
+    }
 }

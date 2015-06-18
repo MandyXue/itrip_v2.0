@@ -172,3 +172,9 @@ body {
     left: -10px;
     z-index: 20;
 }
+
+
+/*about picture*/
+.about-pic{
+    border-color: rgba(255,255,255,0.5);
+}
