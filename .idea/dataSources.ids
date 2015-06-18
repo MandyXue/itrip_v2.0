@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="ProjectPU/EclipseLink" uuid="ff28df0b-82fc-4cc6-877e-64c114294f96">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+  </data-source>
+  <data-source name="MySQL - itripdb@localhost" uuid="a49a9066-7c96-4a02-9eaf-84bf376d1610">
+    <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <schema name="" catalog="itripdb"/>
+    <table name="food" schema="" catalog="itripdb" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="cn_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="province" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="3000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="name"/>
+    </table>
+    <table name="spot" schema="" catalog="itripdb" type="TABLE">
+      <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="cn_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="province" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="description" sqlType="VARCHAR" precision="3000" scale="0" nullable="false" jdbcType="12"/>
+      <column name="longtitude" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="latitude" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="package_thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="couple_thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <column name="family_thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="name"/>
+    </table>
+    <table name="user_food" schema="" catalog="itripdb" type="TABLE">
+      <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="foodname" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="username,foodname"/>
+    </table>
+    <table name="user_spot" schema="" catalog="itripdb" type="TABLE">
+      <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="spotname" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="type" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="username,spotname"/>
+    </table>
+    <table name="usertable" schema="" catalog="itripdb" type="TABLE">
+      <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="username"/>
+    </table>
+  </data-source>
+</component>
