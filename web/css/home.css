@@ -1,0 +1,487 @@
+/* Base structure */
+
+a,
+a:focus,
+a:hover {
+    font-weight: bold;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #fff;
+}
+
+body {
+    color: #000;
+    text-align: center;
+}
+
+/*custom set text white*/
+.white-text {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+/* Padding for spacing */
+.inner {
+    margin-top: 12px;
+    /*padding: 30px;*/
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.inner2 {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+/* site wrapper */
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    /*background-image: url("../images/transparent-back.jpg");*/
+    /*background-attachment:fixed;*/
+    background-position: center;
+    /*-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+    text-align: center;
+}
+
+.site-wrapper-inner {
+    display: table-cell;
+    width: 100%;
+    vertical-align: top;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+}
+
+.cover-container {
+    width: 100%;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*
+ * Cover
+ */
+
+.cover {
+    padding: 0 20px;
+    background: transparent;
+}
+
+.cover2 {
+    padding: 0 0;
+    background: transparent;
+}
+
+.cover .btn-lg {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+/*navigation bar setting*/
+
+.navbar-container {
+    /*display: table-cell;*/
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 80px;
+    vertical-align: middle;
+}
+
+.welcome-container {
+    /*display: table-cell;*/
+    position: absolute;
+    z-index: 8;
+    top: 80px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 40px;
+    vertical-align: middle;
+    /*margin-left: 15%;*/
+}
+
+/*navbar toggle*/
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 18px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+
+.navbar-toggle:focus {
+    outline: 1px;
+}
+
+/*
+ * Header
+ */
+/*.navbar-brand {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+}*/
+.navbar-inverse .navbar-brand {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent
+}
+
+.navbar-nav > li {
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.navbar-nav > li + li {
+    margin-left: 20px;
+}
+
+.navbar-nav > li > a {
+    padding-right: 0;
+    padding-left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    color: rgba(255, 255, 255, .75);
+    border-bottom: 2px solid transparent;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    border-bottom-color: #a9a9a9;
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.navbar-nav .navbar-nav-right2 > li > a:hover,
+.navbar-nav .navbar-nav-right2 > li > a:focus {
+    border-bottom-color: #fff;
+    border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.navbar-nav > li > .active > a,
+.navbar-nav > li > .active > a:hover,
+.navbar-nav > li > .active > a:focus {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 2px solid #fff;
+}
+
+.navbar-inverse {
+    background-color: rgba(0, 0, 0, 0.65);
+    border-color: transparent;
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        float: left;
+    }
+
+    .navbar-nav {
+        float: left;
+        margin-left: 15px;
+    }
+
+    .navbar-nav-right {
+        float: right;
+        margin-top: 10px;
+    }
+
+    .navbar-nav-right2 {
+        float: right;
+    }
+
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .navbar-wrapper .navbar .container {
+        width: 75%;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+    /* Pull out the header*/
+    .navbar {
+        position: fixed;
+        top: 0;
+        text-align: center;
+    }
+
+    .site-wrapper-inner {
+        vertical-align: middle;
+        text-align: center;
+    }
+
+    /* Handle the widths */
+    .navbar,
+    .cover-container,
+    .navbar-container,
+    .welcome-container {
+        width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    }
+
+    /*  .navbar-container{
+        width: 100%;
+      }*/
+}
+
+@media (min-width: 992px) {
+    .navbar,
+    .cover-container,
+    .navbar-container {
+        width: 100%;
+    }
+
+    .inner,
+    .welcome-container {
+        width: 70%;
+    }
+
+    .navbar-container {
+        width: 70%;
+    }
+
+}
+
+/*footer setting for all pages*/
+.home-footer {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+.home-footer-text {
+    position: relative;
+    top: 18px;
+    text-align: center;
+}
+
+/*map view setting*/
+.map-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%; /* For at least Firefox */
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*map container*/
+
+.map-container,
+.map-back-to-home {
+    width: 100%;
+    height: auto;
+    background-color: rgba(223, 244, 249, .35);
+    position: absolute;
+    margin-left: 2%;
+    top: 12%;
+    right: 10%;
+    bottom: 0;
+    left: 7%;
+    z-index: 0;
+}
+
+.map-background {
+    width: 100%;
+    height: 600px;
+    position: center;
+}
+
+.image-setting {
+    height: 40px;
+    width: auto;
+    margin-top: 25%;
+    /*vertical-align: middle;*/
+}
+
+.map-bg,
+.img-bg,
+.back-to-home-container {
+    width: auto;
+    height: 100%;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 100%;
+        /*margin-top: 5%;*/
+    }
+
+    .map-bg,
+    .img-bg {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .map-container {
+        width: 84%;
+        /*margin-top: 5%;*/
+        height: 75%;
+    }
+
+    .map-back-to-home {
+        margin-top: 1%;
+        width: 84%;
+        height: 78%;
+    }
+
+    .back-to-home-container {
+        width: 80%;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+/*Custom go to map button*/
+.btn-gotomap {
+    margin-top: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    outline-color: #fff;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-gotomap:hover {
+    margin-top: 20px;
+    border: 2px solid #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    outline-color: #fff;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btn-text {
+    margin-top: 11px;
+}
+
+.info-text {
+    margin-top: 150px;
+    height: 250px;
+    vertical-align: middle;
+}
+
+.back-wrapper {
+    background-image: url("../images/back-4.jpg");
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.cover-background {
+    background-image: url("../images/back-4.jpg");
+    /*  background-attachment:fixed;
+      background-position: center;*/
+}
+
+/*avatar settings*/
+
+.navbar-nav .row {
+    margin-top: 5px;
+}
+
+.navbar-nav .row .col-md-5 .name-responsive {
+    position: relative;
+    left: -10%;
+    top: 17px;
+}
+
+.navbar-nav .row .col-md-3 .name-responsive {
+    position: relative;
+    /*left: -4%;*/
+    top: 17px;
+}
+
+.navbar-nav .row > li > a {
+    color: rgba(255, 255, 255, .8);
+    width: 100%;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.navbar-nav .row > li > a:hover,
+.navbar-nav .row > li > a:focus {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    width: 100%;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/*dropdown menu*/
+
+.navbar-nav .row .col-md-5 .name-responsive,
+.navbar-nav .row .col-md-5 .name-responsive:focus {
+    position: relative;
+    left: -10%;
+    top: 16px;
+    background-color: transparent;
+}
+
+.dropdown .dropdown-menu {
+    top: 50px;
+    left: -40px;
+    z-index: 20;
+}

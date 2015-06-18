@@ -1,0 +1,287 @@
+/*
+ * Globals
+ */
+a,
+a:focus,
+a:hover {
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+}
+
+body {
+    /*font-family: Georgia, "Times New Roman", Times, serif;*/
+    color: #555;
+    padding-top: 50px;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 75%;
+    }
+
+    .navbar-wrapper .container {
+        width: 60%;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 75%;
+    }
+
+    .navbar-wrapper .container {
+        width: 60%;
+    }
+
+    .col-sm-9 .container {
+        margin-top: -30px;
+        width: 320px;
+        margin-bottom: 20px;
+    }
+
+    .col-sm-9 > p {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/*
+ * Masthead for nav
+ */
+
+.blog-masthead {
+    background-color: #428bca;
+    -webkit-box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 -2px 5px rgba(0, 0, 0, .1);
+}
+
+/*
+ * Main column and sidebar layout
+ */
+
+/* Sidebar modules for boxing content */
+.sidebar-module {
+    padding: 15px;
+    margin: 0 -15px 15px;
+}
+
+.sidebar-module-inset {
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.sidebar-module-inset p:last-child,
+.sidebar-module-inset ul:last-child,
+.sidebar-module-inset ol:last-child {
+    margin-bottom: 0;
+}
+
+/*title style*/
+
+.sidebar-header {
+    border-left: 4px solid #333;
+}
+
+.sidebar-module .sidebar-header > h4 {
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    color: #333;
+    margin-left: 20px;
+}
+
+/*text style*/
+
+.sidebar-module > ul {
+    list-style-type: none;
+}
+
+.item-list {
+    margin-top: 20px;
+}
+
+.sidebar-module .item-list > li > a {
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    font-weight: normal;
+    color: #333;
+}
+
+/*
+ * Blog posts
+ */
+
+.blog-post {
+    margin-bottom: 60px;
+}
+
+.blog-post-title {
+    margin-bottom: 5px;
+    font-size: 40px;
+}
+
+.blog-post-meta {
+    margin-bottom: 20px;
+    color: #999;
+}
+
+/*
+ * Footer
+ */
+
+.footer {
+    /*position: absolute;*/
+    background-color: #fff;
+    margin-top: 10%;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+
+.footer-text {
+    margin-top: -30px;
+}
+
+/* Carousel base class */
+.carousel {
+    height: 350px;
+    /*margin-bottom: 60px;*/
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+    width: 100%;
+    height: 350px;
+    background-color: #777;
+}
+
+.carousel-inner > .item > img {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 350px;
+}
+
+.carousel-container {
+    border: 4px solid rgba(0, 0, 0, 0);
+    outline: 4px solid rgba(0, 0, 0, .3);
+}
+
+@media (min-width: 992px) {
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    .carousel,
+    .carousel .item,
+    .carousel-inner > .item > img {
+        width: 100%;
+    }
+}
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        background-color: #f5f5f5;
+        border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #fff;
+    background-color: #428bca;
+}
+
+/*
+ * Main content
+ */
+
+.main {
+    padding: 20px;
+}
+
+.main .trip-header {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+/*
+ * thumb up image
+ */
+
+.thumb-up-img {
+    background-color: rgba(0, 0, 0, .5);
+    height: 60px;
+    width: 60px;
+}
+
+.selected,
+.thumb-up-img:hover,
+.thumb-up-img:focus {
+    background-color: rgba(0, 0, 0, .8);
+    height: 60px;
+    width: 60px;
+}
+
+.thumb-up-text {
+    /*margin-left: 8px;*/
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.col-md-10 .col-md-5 {
+    margin-top: -4px;
+}

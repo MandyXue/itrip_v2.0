@@ -1,0 +1,187 @@
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.navbar-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*.navbar-wrapper .navbar .container {
+  width: auto;
+}*/
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .navbar-wrapper {
+        margin-top: 20px;
+    }
+
+    /*  .navbar-wrapper {
+        margin-top: 0;
+      }*/
+    .navbar-wrapper .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .navbar-wrapper .navbar {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    /* The navbar becomes detached from the top, so we round the corners */
+    .navbar-wrapper .navbar {
+        border-radius: 4px;
+    }
+}
+
+/*avatar settings*/
+
+.navbar-nav .row {
+    margin-top: 5px;
+}
+
+.navbar-nav .row .col-md-5 .name-responsive,
+.navbar-nav .row .col-md-5 .name-responsive:focus {
+    position: relative;
+    left: -10%;
+    top: 12px;
+    background-color: transparent;
+}
+
+.dropdown .dropdown-menu {
+    top: 40px;
+    left: -10px;
+    z-index: 20;
+}
+
+.navbar-nav .row .col-md-3 .name-responsive {
+    position: relative;
+    /*left: -4%;*/
+    top: 12px;
+}
+
+.signin-footer-text,
+.navbar-header > a,
+.navbar .nav > li > a,
+.navbar-nav .row > li > a {
+    color: rgba(255, 255, 255, .8);
+    width: 100%;
+    font-weight: normal;
+    white-space: nowrap;
+    text-transform: none;
+}
+
+.navbar-header > a,
+.navbar .nav > li > a {
+    font-weight: bold;
+}
+
+.navbar-nav .row > li > a:hover,
+.navbar-nav .row > li > a:focus {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    width: 100%;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+/*trip name*/
+.name-text {
+    /*height: 30px;*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    vertical-align: text-bottom;
+}
+
+.title-text {
+    text-transform: uppercase;
+}
+
+.white-text {
+    color: #fff;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.thumb-up-img {
+    background-color: rgba(0, 0, 0, .5);
+    height: 80px;
+    width: 80px;
+}
+
+.selected,
+.thumb-up-img:hover,
+.thumb-up-img:focus {
+    background-color: rgba(0, 0, 0, .8);
+    height: 80px;
+    width: 80px;
+}
+
+/*thumb up */
+
+.thumb-up-wrapper {
+    position: absolute;
+    margin-top: 100px;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.thumb-up-wrapper {
+    position: absolute;
+    top: 7%;
+    right: 0;
+    left: 0;
+    z-index: 18;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.thumb-up-wrapper > .container {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.thumb-up-wrapper .navbar {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/*.navbar-wrapper .navbar .container {
+  width: auto;
+}*/
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+    /* Navbar positioning foo */
+    .thumb-up-wrapper {
+        margin-top: 20px;
+    }
+
+    /*  .navbar-wrapper {
+        margin-top: 0;
+      }*/
+    .thumb-up-wrapper .container {
+        width: 300px;
+    }
+}
+
