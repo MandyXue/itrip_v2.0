@@ -20,20 +20,45 @@ import java.util.List;
 public class PersonalController {
     @Autowired
     private PersonalService personalService;
+
+//    @RequestMapping(value = "/personal",method = RequestMethod.GET)
+//    public String showPersonal
+//            (Model model,HttpSession session,
+//             @RequestParam(value = "type",required = true)String type,
+//             @RequestParam(value="s_or_f",required = true)String s_or_f)
+//    {
+//        String username= (String) session.getAttribute("userId");
+//        if (s_or_f.equals("food")){
+//        List<UserFoodEntity> thumbFood=personalService.getThumbFood(username);
+//        model.addAttribute("personalFood",thumbFood);
+//            System.out.println(s_or_f+"1");
+//            return "personal_food";
+//        }
+//        else {
+//        List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);
+//        model.addAttribute("personalSpot",thumbSpot);
+//            System.out.println(s_or_f+"2");
+//        return "personal_spot";}
+//    }
     @RequestMapping(value = "/personal",method = RequestMethod.GET)
-    public String showPersonal(Model model,HttpSession session, @RequestParam(value = "type",required = true)String type,
-    @RequestParam(value="s_or_f",required = true)String s_or_f){
-       String username= (String) session.getAttribute("userId");
-        if (s_or_f.equals("food")){
-        List<UserFoodEntity> thumbFood=personalService.getThumbFood(username);
-        model.addAttribute("personalFood",thumbFood);
-            System.out.println(s_or_f+"1");
-            return "per";
+    public String showPersonal(
+            Model model,
+            HttpSession session,
+            @RequestParam(value = "s_or_f", required = true)String s_or_f,
+            @RequestParam(value = "type", required = false)String type
+    ) {
+        String username = (String) session.getAttribute("userId");
+        if (s_or_f.equals("food")) {
+            List<UserFoodEntity> thumbFood = personalService.getThumbFood(username);
+            model.addAttribute("personalFood", thumbFood);
+            return "personal_food";
+        }else if (s_or_f.equals("spot")){
+            List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);
+            model.addAttribute("personalSpot",thumbSpot);
+            return "personal_spot";
+        }else{
+            model.addAttribute("personal_wrong","wrong");
+            return "home";
         }
-        else {
-        List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);
-        model.addAttribute("personalSpot",thumbSpot);
-            System.out.println(s_or_f+"2");
-        return "personal";}
     }
 }
