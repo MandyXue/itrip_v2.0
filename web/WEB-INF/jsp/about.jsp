@@ -62,8 +62,8 @@
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li class="text-center"><a href="personal_trip.html">Trip</a></li>
-                                    <li class="text-center"><a href="personal_food.html">Food</a></li>
+                                    <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                    <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
                                 </ul>
                             </li>
                             <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
