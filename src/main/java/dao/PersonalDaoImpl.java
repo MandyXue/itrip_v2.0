@@ -40,4 +40,14 @@ public class PersonalDaoImpl implements PersonalDao {
         TypedQuery<UserSpotEntity> tq=em.createQuery(c);
         return tq.getResultList();
     }
+    public List<UserSpotEntity> findThumbSpot(String username){
+        CriteriaBuilder cb=em.getCriteriaBuilder();
+        CriteriaQuery c=cb.createQuery(UserSpotEntity.class);
+        Root<UserSpotEntity> user=c.from(UserSpotEntity.class);
+        Path<String> un = user.get("username");
+        Predicate p=cb.and(cb.equal(un,username));
+        c.where(p);
+        TypedQuery<UserSpotEntity> tq=em.createQuery(c);
+        return tq.getResultList();
+    }
 }

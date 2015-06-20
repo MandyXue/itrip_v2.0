@@ -53,7 +53,7 @@ public class PersonalController {
             model.addAttribute("personalFood", thumbFood);
             return "personal_food";
         }else if (s_or_f.equals("spot")){
-            List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);
+            List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username);
             model.addAttribute("personalSpot",thumbSpot);
             return "personal_spot";
         }else{

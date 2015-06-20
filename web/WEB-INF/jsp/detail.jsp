@@ -270,7 +270,7 @@
                     <div class="row text-center">
                         <div class="col-md-4 text-center">
                             <a href="#" id="package">
-                                <img class="img-circle thumb-up-img selected" src="${bp}/images/package-trip.png">
+                                <img class="img-circle thumb-up-img selected" src="${bp}/images/trip-thumb/package-trip.png">
                             </a>
 
                             <div class="thumb-up-text">
@@ -279,7 +279,7 @@
                         </div>
                         <div class="col-md-4">
                             <a href="#" id="couple">
-                                <img class="img-circle thumb-up-img" src="${bp}/images/lover-trip.png">
+                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/lover-trip.png">
                             </a>
 
                             <div class="thumb-up-text">
@@ -288,7 +288,7 @@
                         </div>
                         <div class="col-md-4">
                             <a href="#" id="family">
-                                <img class="img-circle thumb-up-img" src="${bp}/images/family-trip.png">
+                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/family-trip.png">
                             </a>
 
                             <div class="thumb-up-text">

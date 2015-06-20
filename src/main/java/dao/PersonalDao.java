@@ -11,4 +11,5 @@ import java.util.List;
 public interface PersonalDao {
     List<UserFoodEntity> findThumbFood(String username);
     List<UserSpotEntity> findThumbSpot(String username, String type);
+    List<UserSpotEntity> findThumbSpot(String username);
 }

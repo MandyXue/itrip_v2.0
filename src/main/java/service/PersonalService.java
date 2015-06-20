@@ -26,4 +26,8 @@ public class PersonalService {
     public List<UserSpotEntity> getThumbSpot(String username,String type){
         return personalDao.findThumbSpot(username,type);
     }
+
+    public List<UserSpotEntity> getThumbSpot(String username){
+        return personalDao.findThumbSpot(username);
+    }
 }
