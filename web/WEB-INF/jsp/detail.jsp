@@ -66,7 +66,7 @@
                                     <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
                                 </ul>
                             </li>
-                            <li><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out"
+                            <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
                                                                           aria-hidden="true"></span></a></li>
                             <!-- <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li> -->
                             <!-- <li class="col-md-6"><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li> -->
@@ -91,13 +91,13 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Trip</a></li>
                 <c:forEach var="spots" items="${requestScope.spots}">
-                    <li><a href="spot?spotName=${spots.name}&province=innermongolia">${spots.name}</a></li>
+                    <li><a href="spot?spotName=${spots.name}&province=${requestScope.province}">${spots.cnName}</a></li>
                 </c:forEach>
             </ul>
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Food</a></li>
                 <c:forEach var="foods" items="${requestScope.foods}">
-                    <li><a href="food?foodName=${foods.name}&province=innermongolia">${foods.name}</a></li>
+                    <li><a href="food?foodName=${foods.name}&province=$${requestScope.province}">${foods.cnName}</a></li>
                 </c:forEach>
             </ul>
         </div>
@@ -108,10 +108,10 @@
                     <div class="col-md-7">
                         <h1 class="trip-header text-right">
                             <c:if test="${requestScope.type=='spot'}">
-                                <c:out value="${requestScope.spotDetail.name}"/>
+                                <c:out value="${requestScope.spotDetail.cnName}"/>
                             </c:if>
                             <c:if test="${requestScope.type=='food'}">
-                                <c:out value="${requestScope.foodDetail.name}"/>
+                                <c:out value="${requestScope.foodDetail.cnName}"/>
                             </c:if>
                         </h1>
                     </div>
@@ -176,10 +176,10 @@
             <c:if test="${sessionScope.get('userId')==null}">
                 <h1 class="trip-header text-center">
                     <c:if test="${requestScope.type=='spot'}">
-                        <c:out value="${requestScope.spotDetail.name}"/>
+                        <c:out value="${requestScope.spotDetail.cnName}"/>
                     </c:if>
                     <c:if test="${requestScope.type=='food'}">
-                        <c:out value="${requestScope.foodDetail.name}"/>
+                        <c:out value="${requestScope.foodDetail.cnName}"/>
                     </c:if>
                 </h1>
             </c:if>

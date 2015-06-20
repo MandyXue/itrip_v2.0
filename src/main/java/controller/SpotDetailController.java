@@ -41,6 +41,7 @@ public class SpotDetailController {
 
         String type = "spot";
         model.addAttribute("type", type);
+        model.addAttribute("province", province);
 
         return "detail";
     }

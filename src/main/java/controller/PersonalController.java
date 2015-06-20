@@ -51,11 +51,20 @@ public class PersonalController {
         if (s_or_f.equals("food")) {
             List<UserFoodEntity> thumbFood = personalService.getThumbFood(username);
             model.addAttribute("personalFood", thumbFood);
+            model.addAttribute("s_or_f",s_or_f);
             return "personal_food";
         }else if (s_or_f.equals("spot")){
-            List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username);
-            model.addAttribute("personalSpot",thumbSpot);
-            return "personal_spot";
+            model.addAttribute("s_or_f",s_or_f);
+            if (type==null){
+                List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username);
+                model.addAttribute("personalSpot",thumbSpot);
+                return "personal_spot";
+            }else{
+                List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);
+                model.addAttribute("personalSpot",thumbSpot);
+                model.addAttribute("type",type);
+                return "personal_spot";
+            }
         }else{
             model.addAttribute("personal_wrong","wrong");
             return "home";

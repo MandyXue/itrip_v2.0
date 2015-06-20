@@ -65,18 +65,21 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="about">About</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button" aria-expanded="false">Angel<span class="caret"></span></a>
+                            <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                <c:out value="${sessionScope.get('userId')}"></c:out>
+                                <span class="caret"></span>
+                            </a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class="text-center"><a href="personal_trip.html">Trip</a></li>
-                                <li class="text-center"><a href="personal_food.html">Food</a></li>
+                                <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
                             </ul>
                         </li>
-                        <li><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
+                        <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
                         <!-- <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li> -->
                         <!-- <li class="col-md-6"><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li> -->
                     </ul>
@@ -89,10 +92,26 @@
 <div class="thumb-up-wrapper">
     <div class="container">
         <div class="row text-center">
-            <div class="col-md-3"><a href="#"><img class="img-circle thumb-up-img selected" src="${bp}/images/trip-thumb/all-trip.png"></a></div>
-            <div class="col-md-3"><a href="#"><img class="img-circle thumb-up-img selected" src="${bp}/images/trip-thumb/package-trip.png"></a></div>
-            <div class="col-md-3"><a href="#"><img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/lover-trip.png"></a></div>
-            <div class="col-md-3"><a href="#"><img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/family-trip.png"></a></div>
+            <div class="col-md-3">
+                <a href="personal?s_or_f=spot">
+                    <img class="img-circle thumb-up-img <c:if test="${requestScope.type==null}">selected</c:if>" src="${bp}/images/trip-thumb/all-trip.png">
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="personal?s_or_f=spot&type=1">
+                    <img class="img-circle thumb-up-img <c:if test="${requestScope.type=='1'}">selected</c:if>" src="${bp}/images/trip-thumb/package-trip.png">
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="personal?s_or_f=spot&type=2">
+                    <img class="img-circle thumb-up-img <c:if test="${requestScope.type=='2'}">selected</c:if>" src="${bp}/images/trip-thumb/lover-trip.png">
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="personal?s_or_f=spot&type=3">
+                    <img class="img-circle thumb-up-img <c:if test="${requestScope.type=='3'}">selected</c:if>" src="${bp}/images/trip-thumb/family-trip.png">
+                </a>
+            </div>
         </div>
     </div>
 </div>
@@ -103,7 +122,29 @@
     <div id="reel">
         <!-- Header Item -->
         <div id="header" class="item" data-width="200">
-            <h1 class="title-text">trip</h1>
+            <h1 class="title-text">
+                <c:choose>
+                    <c:when test="${requestScope.s_or_f=='spot'}">
+                        <c:choose>
+                            <c:when test="${requestScope.type=='1'}">
+                                pack -age trip
+                            </c:when>
+                            <c:when test="${requestScope.type=='2'}">
+                                lover trip
+                            </c:when>
+                            <c:when test="${requestScope.type=='3'}">
+                                family trip
+                            </c:when>
+                            <c:otherwise>
+                                trip
+                            </c:otherwise>
+                        </c:choose>
+                    </c:when>
+                    <c:otherwise>
+                        food
+                    </c:otherwise>
+                </c:choose>
+            </h1>
         </div>
         <!-- Thumb Items -->
         <c:forEach var="personalSpot" items="${requestScope.personalSpot}" >
