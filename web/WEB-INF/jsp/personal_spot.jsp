@@ -33,22 +33,6 @@
     <link href="${bp}/css/personal.css" rel="stylesheet">
 </head>
 <body>
-<%--<a href=<c:url value="/personal" >--%>
-       <%--<c:param name="type" value="1"/>--%>
-       <%--<c:param name="s_or_f" value="spot"/>--%>
-<%--</c:url>>package</a>--%>
-<%--<a href=<c:url value="/personal" >--%>
-       <%--<c:param name="type" value="2"/>--%>
-       <%--<c:param name="s_or_f" value="spot"/>--%>
-<%--</c:url>>couple</a>--%>
-<%--<a href=<c:url value="/personal" >--%>
-       <%--<c:param name="type" value="3"/>--%>
-       <%--<c:param name="s_or_f" value="spot"/>--%>
-<%--</c:url>>house</a>--%>
-<%--<a href=<c:url value="/personal" >--%>
-       <%--<c:param name="type" value="1"/>--%>
-       <%--<c:param name="s_or_f" value="food"/>--%>
-<%--</c:url>>food</a>--%>
 
 <div class="navbar-wrapper">
     <div class="container">
