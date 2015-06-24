@@ -38,7 +38,7 @@ public class SpotThumbController {
         }
 
         //新增点赞记录
-        else if (userName.equals(null)) {
+        else if (userName==null) {
             spotThumbs = spotService.addSpotThumbs(spotName, type);
         } else {
             spotThumbs = spotService.addSpotThumbs(spotName, type);

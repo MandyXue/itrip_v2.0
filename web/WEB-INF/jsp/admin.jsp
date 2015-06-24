@@ -55,7 +55,9 @@
                     <!-- get session -->
                     <c:if test="${sessionScope.get('userId')!=null}">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li>
+                            <li class="col-md-6"><a class="name-responsive" href="admin">
+                                <c:out value="${sessionScope.get('userId')}"/>
+                            </a></li>
                             <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
                                                                                 aria-hidden="true"></span></a></li>
                         </ul>

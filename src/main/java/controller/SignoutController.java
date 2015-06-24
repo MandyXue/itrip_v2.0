@@ -18,6 +18,6 @@ public class SignoutController {
     @RequestMapping(value = "/signout", method = RequestMethod.GET)
     public String Signout(Model model, HttpSession session, SessionStatus sessionStatus) {
         sessionStatus.setComplete();
-        return "home";
+        return "redirect:/home";
     }
 }

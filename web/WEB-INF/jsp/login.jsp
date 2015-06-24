@@ -1,3 +1,5 @@
+<%@ page import="org.springframework.web.context.request.SessionScope" %>
+<%@ page import="org.springframework.web.context.request.RequestScope" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -25,6 +27,42 @@
     <link rel="stylesheet" type="text/css" href="${bp}/css/sign.css">
     <!-- bootstrap js -->
     <script src="${bp}/external/bootstrap-3.3.4/docs/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#signIn').submit(
+                    function(event){
+                        var username = $('#username').val();
+                        var password = $('#password').val();
+                        var data = 'username='
+                                + encodeURIComponent(username)
+                                + '&password='
+                                + encodeURIComponent(password);
+                        <%--var s="<%=request.getAttribute("name")%>";--%>
+                        $.ajax({
+                            url : $('#signIn').attr("action"),
+                            data : data,
+                            type : "GET",
+                            success : function(response) {
+//                                $('#nameResult').replaceWith('<span id="nameResult">'+ response + '</span>');
+                                if(response=="success"){
+                                    window.location.href = document.referrer;
+//                                    window.history.back();
+//                                    sessionStorage.setItem("userId",username);
+//                                    window.location.replace(location.href);
+                                }else{
+                                    $('#pwdResult').replaceWith('<span id="pwdResult"><span class="glyphicon glyphicon-remove" aria-hidden="true"> your username or password is wrong</span>');
+                                }
+                            },
+                            error : function(xhr,status,error){
+                                alert(xhr.responseText);
+                            }
+                        });
+                        return false;
+                    });
+        });
+    </script>
 
 </head>
 
@@ -64,21 +102,29 @@
     <div class="container">
         <h1 class="text-center top-and-bottom">Sign In</h1>
     </div>
-    <form action="login" method="post">
+    <form id="signIn" action="login/result" method="post">
         <div class="form-group">
             <label for="username" class="text-left">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" autofocus required>
+            <label class="invalid-input-alert">
+                <%--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>--%>
+                <%--<span id="nameResult"></span>--%>
+            </label>
         </div>
         <div class="form-group">
             <label for="password" class="text-left">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
+            <label class="invalid-input-alert">
+
+                <span id="pwdResult"></span>
+            </label>
         </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1"><input class="remember-me" type="checkbox"></div>
-                <div class="col-md-8"><label class="remember-me-text">Remember me</label></div>
-            </div>
-        </div>
+        <%--<div class="container-fluid">--%>
+            <%--<div class="row">--%>
+                <%--<div class="col-md-1"><input class="remember-me" type="checkbox"></div>--%>
+                <%--<div class="col-md-8"><label class="remember-me-text">Remember me</label></div>--%>
+            <%--</div>--%>
+        <%--</div>--%>
         <button type="submit" class="btn btn-primary top-and-bottom submit">Submit</button>
     </form>
 </div>
@@ -108,5 +154,3 @@
 </body>
 
 </html>
-
-<%--TODO: admin login--%>

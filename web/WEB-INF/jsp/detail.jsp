@@ -53,27 +53,37 @@
                         <li><a href="about">About</a></li>
                     </ul>
                     <!-- get session -->
-                    <c:if test="${sessionScope.get('userId')!=null}">
+                    <c:set value="${sessionScope.get('userId')}" var="user"></c:set>
+                    <c:if test="${user!=null}">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button"
-                                   aria-expanded="false">
-                                    <c:out value="${sessionScope.get('userId')}"></c:out>
-                                    <span class="caret"></span>
+                            <c:choose>
+                                <c:when test="${user.equals('admin')}">
+                                    <li><a class="name-responsive" href="admin"><c:out value="${sessionScope.get('userId')}"></c:out></a></li>
+                                    <%--<li><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>--%>
+                                </c:when>
+                                <c:otherwise>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button"
+                                           aria-expanded="false">
+                                            <c:out value="${sessionScope.get('userId')}"></c:out>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                            <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                        </ul>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
+                            <li>
+                                <a class="name-responsive" href="signout">
+                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                                 </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
-                                    <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
-                                </ul>
                             </li>
-                            <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
-                                                                          aria-hidden="true"></span></a></li>
-                            <!-- <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li> -->
-                            <!-- <li class="col-md-6"><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li> -->
                         </ul>
                     </c:if>
                     <!-- no session -->
-                    <c:if test="${sessionScope.get('userId')==null}">
+                    <c:if test="${user==null}">
                         <ul class="nav navbar-nav navbar-right">
                             <button type="button" onclick="signup()" class="btn btn-signup navbar-btn">Sign up</button>
                             <button type="button" onclick="signin()" class="btn btn-signin navbar-btn">Sign in</button>
@@ -125,7 +135,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+                                            <h4 class="modal-title" id="exampleModalLabel">Upload</h4>
                                         </div>
                                         <div class="modal-body">
                                             <c:choose>
@@ -140,13 +150,13 @@
                                                 </c:otherwise>
                                             </c:choose>
                                                         <div class="form-group">
-                                                            <label for="message-text" class="control-label">Upload your picture:</label>
-                                                            <input type="file" name="file1" id="file1" style="font-size: initial;"><br/><br/>
+                                                            <label for="message-text" class="control-label">Select a picture:</label>
+                                                            <input type="file" name="file1" id="file1" style="font-size: initial;">
                                                             <label for="message-text" class="control-label">Description:</label>
-                                                        <textarea class="form-control" id="message-text"name="description" rows="10" cols="30"><c:choose><c:when test="${requestScope.type=='spot'}"><c:out value="${requestScope.spotDetail.description}"/></c:when><c:when test="${requestScope.type=='food'}"><c:out value="${requestScope.foodDetail.description}"/></c:when><c:otherwise>unknown</c:otherwise></c:choose></textarea>
-                                                            <br/><br/>
+                                                            <textarea class="form-control" id="message-text"name="description" rows="10" cols="30"><c:choose><c:when test="${requestScope.type=='spot'}"><c:out value="${requestScope.spotDetail.description}"/></c:when><c:when test="${requestScope.type=='food'}"><c:out value="${requestScope.foodDetail.description}"/></c:when><c:otherwise>unknown</c:otherwise></c:choose></textarea>
                                                             <hr class="featurette-divider">
-                                                            <input type="submit" name="upload" value="Upload"><br/>
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            <input type="submit" name="upload" value="Upload" class="btn btn-primary">
                                                         </div>
                                                     </form>
                                         </div>
@@ -181,6 +191,16 @@
                             <li data-target="#carousel" data-slide-to="2"></li>
                             <li data-target="#carousel" data-slide-to="3"></li>
                             <li data-target="#carousel" data-slide-to="4"></li>
+                            <c:if test="${type=='spot'}">
+                                <c:forEach var="number" items="${validSpot}">
+                                    <li data-target="#carousel" data-slide-to="4"></li>
+                                </c:forEach>
+                            </c:if>
+                            <c:if test="${type=='food'}">
+                                <c:forEach var="number" items="${validFood}">
+                                    <li data-target="#carousel" data-slide-to="4"></li>
+                                </c:forEach>
+                            </c:if>
                         </ol>
                         <!-- wrapper for slides -->
                         <c:if test="${type=='spot'}">
@@ -210,6 +230,12 @@
 
                                     <div class="carousel-caption"></div>
                                 </div>
+                                <c:forEach var="pic" items="${validSpot}">
+                                    <div class="item">
+                                        <img src="<c:out value="${bp}/upload/${pic.pictures}"/>" alt="pic-5">
+                                        <div class="carousel-caption"></div>
+                                    </div>
+                                </c:forEach>
                             </div>
                         </c:if>
                         <c:if test="${type=='food'}">
@@ -239,6 +265,12 @@
 
                                     <div class="carousel-caption"></div>
                                 </div>
+                                <c:forEach var="pic" items="${validFood}">
+                                    <div class="item">
+                                        <img src="<c:out value="${bp}/upload/${pic.pictures}"/>" alt="pic-5">
+                                        <div class="carousel-caption"></div>
+                                    </div>
+                                </c:forEach>
                             </div>
                         </c:if>
                         <!-- controls -->
@@ -258,8 +290,9 @@
                     <div class="row text-center">
                         <div class="col-md-4 text-center">
                             <a href="#" id="package">
-                                <%--TODO: add selected--%>
-                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/package-trip.png">
+                                <img class="img-circle thumb-up-img
+                                <c:if test="${userSpotPackage==true}"> selected</c:if>
+                                " src="${bp}/images/trip-thumb/package-trip.png">
                             </a>
 
                             <div class="thumb-up-text">
@@ -268,7 +301,9 @@
                         </div>
                         <div class="col-md-4">
                             <a href="#" id="couple">
-                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/lover-trip.png">
+                                <img class="img-circle thumb-up-img
+                                <c:if test="${userSpotCouple==true}"> selected</c:if>
+                                " src="${bp}/images/trip-thumb/lover-trip.png">
                             </a>
 
                             <div class="thumb-up-text">
@@ -277,7 +312,9 @@
                         </div>
                         <div class="col-md-4">
                             <a href="#" id="family">
-                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/family-trip.png">
+                                <img class="img-circle thumb-up-img
+                                <c:if test="${userSpotFamily==true}"> selected</c:if>
+                                " src="${bp}/images/trip-thumb/family-trip.png">
                             </a>
 
                             <div class="thumb-up-text">
@@ -295,7 +332,9 @@
                     <div class="row text-center">
                         <div class="col-md-12 text-center">
                             <a href="#" id="thumbs">
-                                <img class="img-circle thumb-up-img selected" src="${bp}/images/food_thumb.png">
+                                <img class="img-circle thumb-up-img
+                                <c:if test="${userFood==true}"> selected</c:if>
+                                 " src="${bp}/images/food_thumb.png">
                             </a>
 
                             <div class="thumb-up-text">

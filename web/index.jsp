@@ -8,10 +8,10 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:forward page="WEB-INF/jsp/home.jsp"/>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-</body>
-</html>
+<%--<html>--%>
+<%--<head>--%>
+    <%--<title></title>--%>
+<%--</head>--%>
+<%--<body>--%>
+<%--</body>--%>
+<%--</html>--%>

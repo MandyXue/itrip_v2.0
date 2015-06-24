@@ -4,6 +4,7 @@ import entity.FoodEntity;
 import org.eclipse.persistence.sessions.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -27,6 +28,7 @@ public class FoodThumbController {
     public
     @ResponseBody
     String showFoodThumbs(
+            Model model,
             @RequestParam(value = "foodName", required = true) String foodName, HttpSession session) {
         Integer foodThumbs;
         String userName = (String) session.getAttribute("userId");
@@ -36,10 +38,10 @@ public class FoodThumbController {
             userFoodService.removeUserFood(userName, foodName);
             foodThumbs = foodService.dropFoodThumbs(foodName);
         }
-
         //新增点赞记录
-        else if (userName.equals(null)) {
+        else if (userName==null) {
             foodThumbs = foodService.addFoodThumbs(foodName);
+            model.addAttribute("thumb","yes");
         } else {
             foodThumbs = foodService.addFoodThumbs(foodName);
             userFoodService.addUserFood(userName, foodName);

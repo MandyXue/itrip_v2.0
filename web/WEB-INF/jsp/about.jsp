@@ -53,27 +53,37 @@
                         <li class="active"><a href="about">About</a></li>
                     </ul>
                     <!-- get session -->
-                    <c:if test="${sessionScope.get('userId')!=null}">
+                    <c:set value="${sessionScope.get('userId')}" var="user"></c:set>
+                    <c:if test="${user!=null}">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button"
-                                   aria-expanded="false">
-                                    <c:out value="${sessionScope.get('userId')}"></c:out>
-                                    <span class="caret"></span>
+                            <c:choose>
+                                <c:when test="${user.equals('admin')}">
+                                    <li><a class="name-responsive" href="admin"><c:out value="${sessionScope.get('userId')}"></c:out></a></li>
+                                    <%--<li><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>--%>
+                                </c:when>
+                                <c:otherwise>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button"
+                                           aria-expanded="false">
+                                            <c:out value="${sessionScope.get('userId')}"></c:out>
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                            <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                        </ul>
+                                    </li>
+                                </c:otherwise>
+                            </c:choose>
+                            <li>
+                                <a class="name-responsive" href="signout">
+                                    <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
                                 </a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
-                                    <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
-                                </ul>
                             </li>
-                            <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
-                                                                                aria-hidden="true"></span></a></li>
-                            <!-- <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li> -->
-                            <!-- <li class="col-md-6"><a class="name-responsive" href="#"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li> -->
                         </ul>
                     </c:if>
                     <!-- no session -->
-                    <c:if test="${sessionScope.get('userId')==null}">
+                    <c:if test="${user==null}">
                         <ul class="nav navbar-nav navbar-right">
                             <button type="button" onclick="signup()" class="btn btn-signup navbar-btn">Sign up</button>
                             <button type="button" onclick="signin()" class="btn btn-signin navbar-btn">Sign in</button>

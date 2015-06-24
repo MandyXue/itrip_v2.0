@@ -39,6 +39,15 @@
     <script src="${bp}/external/ammap/maps/js/chinaLow.js" type="text/javascript"></script>
     <script src="${bp}/js/usrMap.js" type="text/javascript"></script>
 
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <%--<script type="text/javascript">--%>
+        <%--$(document).ready(function(){--%>
+            <%--$('#logout').click(--%>
+                    <%--Session.clear();--%>
+                    <%--window.location.href = "home";--%>
+        <%--});--%>
+    <%--</script>--%>
+
 </head>
 
 <body>
@@ -69,19 +78,27 @@
                                     <li><a href="about">About</a></li>
                                 </ul>
                                 <!-- get session -->
-                                <c:if test="${sessionScope.get('userId')!=null}">
+                                <c:set value="${sessionScope.get('userId')}" var="user"></c:set>
+                                <c:if test="${user!=null}">
                                     <ul class="nav navbar-nav navbar-nav-right2">
-                                        <li class="dropdown">
-                                            <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#"
-                                               role="button" aria-expanded="false">
-                                                <c:out value="${sessionScope.get('userId')}"></c:out>
-                                                <span class="caret"></span>
-                                            </a>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
-                                                <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
-                                            </ul>
-                                        </li>
+                                        <c:choose>
+                                            <c:when test="${user.equals('admin')}">
+                                                <li><a class="name-responsive" href="admin"><c:out value="${user}"/></a>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <li class="dropdown">
+                                                    <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#"
+                                                       role="button" aria-expanded="false">
+                                                        <c:out value="${sessionScope.get('userId')}"></c:out>
+                                                        <span class="caret"></span>
+                                                    </a>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                                        <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                                    </ul>
+                                                </li>
+                                            </c:otherwise>
+                                        </c:choose>
                                         <li><a class="name-responsive" href="signout"><span
                                                 class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
                                         <!-- <li class="col-md-6"><a class="name-responsive" href="#">Administrator</a></li> -->
@@ -89,7 +106,7 @@
                                     </ul>
                                 </c:if>
                                 <!-- no session -->
-                                <c:if test="${sessionScope.get('userId')==null}">
+                                <c:if test="${user==null}">
                                     <ul class="nav navbar-nav navbar-nav-right">
                                         <button type="button" onclick="signup()" class="btn btn-signup navbar-btn">Sign
                                             up
@@ -111,39 +128,8 @@
                         <div class="row">
                             <div class="col-xs-12 map-bg">
                                 <div class="info-text">
-                                    <h1 class="cover-heading white-text">First, choose a province.</h1>
-                                    <!-- <p class="lead white-text">First,choose a province.</p> -->
-                                    <p class="lead white-text">
-                                        <a id="goToProvince" class="btn btn-gotomap">
-                                            <span class="glyphicon glyphicon-menu-down btn-text"
-                                                  aria-hidden="true"></span>
-                                        </a>
-                                    </p>
-                                </div>
-                                <img id="provinceimg" src="images/transparent-back.gif" class="img-bg">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 map-bg">
-                                <div class="info-text">
-                                    <h1 class="cover-heading white-text">Second, view the spots name and choose
-                                        one.</h1>
-                                    <!-- <p class="lead white-text">First,choose a province.</p> -->
-                                    <p class="lead white-text">
-                                        <a id="goToSpot" class="btn btn-gotomap">
-                                            <span class="glyphicon glyphicon-menu-down btn-text"
-                                                  aria-hidden="true"></span>
-                                        </a>
-                                    </p>
-                                </div>
-                                <img id="spotimg" src="images/transparent-back.gif" class="img-bg">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-12 map-bg">
-                                <div class="info-text">
-                                    <h1 class="cover-heading white-text">Now you can start your own journey.</h1>
-                                    <!-- <p class="lead white-text">First,choose a province.</p> -->
+                                    <h1 class="cover-heading white-text">Start your journey in iTrip!</h1>
+                                    <p class="lead white-text">Let's choose where to go and whom to go with.</p>
                                     <p class="lead white-text">
                                         <a id="goToMap" class="btn btn-gotomap">
                                             <span class="glyphicon glyphicon-menu-down btn-text"
@@ -151,7 +137,6 @@
                                         </a>
                                     </p>
                                 </div>
-                                <!-- <img src="images/transparent-back.gif" class="img-bg"> -->
                             </div>
                         </div>
                     </div>
