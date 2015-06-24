@@ -141,21 +141,9 @@
                                             </c:choose>
                                                         <div class="form-group">
                                                             <label for="message-text" class="control-label">Upload your picture:</label>
-                                                            <input type="file" name="file1" id="file1"><br/><br/>
+                                                            <input type="file" name="file1" id="file1" style="font-size: initial;"><br/><br/>
                                                             <label for="message-text" class="control-label">Description:</label>
-                                                        <textarea class="form-control" id="message-text"name="description" rows="10" cols="30">
-                                                            <c:choose>
-                                                                <c:when test="${requestScope.type=='spot'}">
-                                                                    <c:out value="${requestScope.spotDetail.description}"/>
-                                                                </c:when>
-                                                                <c:when test="${requestScope.type=='food'}">
-                                                                    <c:out value="${requestScope.foodDetail.description}"/>
-                                                                </c:when>
-                                                                <c:otherwise>
-                                                                    unknown
-                                                                </c:otherwise>
-                                                                </c:choose>
-                                                        </textarea>
+                                                        <textarea class="form-control" id="message-text"name="description" rows="10" cols="30"><c:choose><c:when test="${requestScope.type=='spot'}"><c:out value="${requestScope.spotDetail.description}"/></c:when><c:when test="${requestScope.type=='food'}"><c:out value="${requestScope.foodDetail.description}"/></c:when><c:otherwise>unknown</c:otherwise></c:choose></textarea>
                                                             <br/><br/>
                                                             <hr class="featurette-divider">
                                                             <input type="submit" name="upload" value="Upload"><br/>
@@ -270,7 +258,8 @@
                     <div class="row text-center">
                         <div class="col-md-4 text-center">
                             <a href="#" id="package">
-                                <img class="img-circle thumb-up-img selected" src="${bp}/images/trip-thumb/package-trip.png">
+                                <%--TODO: add selected--%>
+                                <img class="img-circle thumb-up-img" src="${bp}/images/trip-thumb/package-trip.png">
                             </a>
 
                             <div class="thumb-up-text">

@@ -5,11 +5,12 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by AngelYang on 2015/6/4.
+ * Created by mandyxue on 15/6/24.
  */
 public class UserSpotEntityPK implements Serializable {
     private String username;
     private String spotname;
+    private String type;
 
     @Column(name = "username", nullable = false, insertable = true, updatable = true, length = 15)
     @Id
@@ -31,6 +32,16 @@ public class UserSpotEntityPK implements Serializable {
         this.spotname = spotname;
     }
 
+    @Column(name = "type", nullable = false, insertable = true, updatable = true, length = 15)
+    @Id
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -39,6 +50,7 @@ public class UserSpotEntityPK implements Serializable {
         UserSpotEntityPK that = (UserSpotEntityPK) o;
 
         if (spotname != null ? !spotname.equals(that.spotname) : that.spotname != null) return false;
+        if (type != null ? !type.equals(that.type) : that.type != null) return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
 
         return true;
@@ -48,6 +60,7 @@ public class UserSpotEntityPK implements Serializable {
     public int hashCode() {
         int result = username != null ? username.hashCode() : 0;
         result = 31 * result + (spotname != null ? spotname.hashCode() : 0);
+        result = 31 * result + (type != null ? type.hashCode() : 0);
         return result;
     }
 }

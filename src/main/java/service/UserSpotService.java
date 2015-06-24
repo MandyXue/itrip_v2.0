@@ -1,6 +1,5 @@
 package service;
 
-import dao.UserFoodDao;
 import dao.UserSpotDao;
 import entity.UserSpotEntity;
 import org.springframework.beans.factory.annotation.Autowired;

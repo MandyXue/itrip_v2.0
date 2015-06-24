@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by mandyxue on 15/6/10.
+ * Created by mandyxue on 15/6/24.
  */
 @Entity
 @Table(name = "user_spot", schema = "", catalog = "itripdb")
@@ -55,7 +55,7 @@ public class UserSpotEntity {
         this.date = date;
     }
 
-    @Basic
+    @Id
     @Column(name = "type", nullable = false, insertable = true, updatable = true, length = 15)
     public String getType() {
         return type;

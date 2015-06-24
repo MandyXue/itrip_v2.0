@@ -44,7 +44,7 @@ public class UploadController extends HttpServlet {
             String fname1 = p.getSubmittedFileName();           //获取文件名
             int path_idx = fname1.lastIndexOf("\\") + 1;        //截取文件名
             String fname2 = fname1.substring(path_idx, fname1.length());
-            p.write(path+fname2);                              //写入web根路径下的upload文件夹中
+            p.write(path+"/upload/"+fname2);                              //写入web根路径下的upload文件夹中
 
 
             //Save

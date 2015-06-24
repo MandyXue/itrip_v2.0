@@ -159,3 +159,4 @@
 <script src="${bp}/js/sign.js"></script>
 </body>
 </html>
+<%--TODO:userSpot and spot table relationship--%>

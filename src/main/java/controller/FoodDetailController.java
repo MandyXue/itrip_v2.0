@@ -39,6 +39,8 @@ public class FoodDetailController {
         String type = "food";
         model.addAttribute("type", type);
 
+        //TODO: pvalid dvalid -1,0,1
+
         return "detail";
     }
 }

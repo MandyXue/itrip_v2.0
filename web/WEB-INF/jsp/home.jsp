@@ -206,10 +206,10 @@
         },
         areasSettings: {
             autoZoom: true,
-            rollOverOutlineColor: "#347C01",
-            selectedColor: "#347C01",
+            rollOverOutlineColor: "#a07717",
+            selectedColor: "#ffb300",
             color: "#a791b4",
-            rollOverColor: "#347C01",
+            rollOverColor: "#ffb300",
             rollOverOutlineThickness: 0.5
         },
         zoomControl: {

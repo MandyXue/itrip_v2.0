@@ -30,10 +30,6 @@ $(document).ready(function () {
             });
             return false;
         });
-});
-
-
-$(document).ready(function () {
     $('#package').click(
         function (event) {
             //获取url中的参数foodName
@@ -62,10 +58,6 @@ $(document).ready(function () {
             });
             return false;
         });
-});
-
-
-$(document).ready(function () {
     $('#couple').click(
         function (event) {
             //获取url中的参数foodName
@@ -94,10 +86,6 @@ $(document).ready(function () {
             });
             return false;
         });
-});
-
-
-$(document).ready(function () {
     $('#family').click(
         function (event) {
             //获取url中的参数foodName
@@ -126,4 +114,7 @@ $(document).ready(function () {
             });
             return false;
         });
+    $('.thumb-up-img').click(function (e) {
+        $(this).toggleClass('selected');
+    });
 });

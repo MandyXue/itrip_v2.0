@@ -54,7 +54,7 @@
       <column name="spotname" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
       <column name="type" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="username,spotname"/>
+      <primary-key name="PRIMARY" columns="username,spotname,type"/>
     </table>
     <table name="usertable" schema="" catalog="itripdb" type="TABLE">
       <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>

@@ -48,3 +48,5 @@ public class FoodThumbController {
         return Integer.toString(foodThumbs);
     }
 }
+
+//TODO:delete thumb

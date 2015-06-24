@@ -11,6 +11,8 @@ public class UploadEntityPK implements Serializable {
     private String username;
     private String spotfood;
 
+
+
     @Column(name = "username", nullable = false, insertable = true, updatable = true, length = 15)
     @Id
     public String getUsername() {

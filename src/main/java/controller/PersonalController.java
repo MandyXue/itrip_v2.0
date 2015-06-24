@@ -71,3 +71,5 @@ public class PersonalController {
         }
     }
 }
+
+//TODO:select userspot and userfood pictures

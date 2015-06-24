@@ -2,7 +2,6 @@ package dao;
 
 import entity.UserFoodEntity;
 import entity.UserSpotEntity;
-import entity.UsertableEntity;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

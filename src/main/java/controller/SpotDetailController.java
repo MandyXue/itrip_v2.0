@@ -43,6 +43,7 @@ public class SpotDetailController {
         model.addAttribute("type", type);
         model.addAttribute("province", province);
 
+        //TODO: select userSpot
         return "detail";
     }
 }
