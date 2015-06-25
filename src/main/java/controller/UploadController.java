@@ -55,9 +55,11 @@ public class UploadController extends HttpServlet {
             em.getTransaction().begin();
             em.persist(uploadEntity);
             em.getTransaction().commit();
+            request.setAttribute("upload","success");
 
             request.getRequestDispatcher("WEB-INF/jsp/uploadsuccess.jsp").forward(request,response);
         } else {
+            request.setAttribute("upload","fail");
             request.getRequestDispatcher("WEB-INF/jsp/uploadfail.jsp").forward(request,response);
         }
 

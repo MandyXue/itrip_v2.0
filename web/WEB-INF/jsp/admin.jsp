@@ -120,3 +120,5 @@
 <script src="${bp}/external/bootstrap-3.3.4/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
+
+<%--TODO:ajax 对／错 button ＝》替换成一个button--%>

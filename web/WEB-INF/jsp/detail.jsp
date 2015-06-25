@@ -137,16 +137,17 @@
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                             <h4 class="modal-title" id="exampleModalLabel">Upload</h4>
                                         </div>
+                                        <%--TODO:upload ajax--%>
                                         <div class="modal-body">
                                             <c:choose>
                                                 <c:when test="${requestScope.type=='spot'}">
-                                                    <form action="upload?spotfood=<c:out value="${requestScope.spotDetail.name}"/>&type=spot" enctype="multipart/form-data" method="post">
+                                                    <form id="upload" action="upload?spotfood=<c:out value="${requestScope.spotDetail.name}"/>&type=spot" enctype="multipart/form-data" method="post">
                                                 </c:when>
                                                 <c:when test="${requestScope.type=='food'}">
-                                                    <form action="upload?spotfood=<c:out value="${requestScope.foodDetail.name}"/>&type=food" enctype="multipart/form-data" method="post">
+                                                    <form id="upload" action="upload?spotfood=<c:out value="${requestScope.foodDetail.name}"/>&type=food" enctype="multipart/form-data" method="post">
                                                 </c:when>
                                                 <c:otherwise>
-                                                    <form action="upload?spotfood=unknown&type=unknown" enctype="multipart/form-data" method="post">
+                                                    <form id="upload" action="upload?spotfood=unknown&type=unknown" enctype="multipart/form-data" method="post">
                                                 </c:otherwise>
                                             </c:choose>
                                                         <div class="form-group">

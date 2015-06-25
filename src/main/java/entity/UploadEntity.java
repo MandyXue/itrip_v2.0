@@ -116,3 +116,5 @@ public class UploadEntity {
         return result;
     }
 }
+
+//TODO: 用户上传页面 -1 未通过 0 待审核 1 已通过
