@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Administrator on 2015/6/10.
@@ -26,7 +27,10 @@ public class PersonalService {
         return personalDao.findThumbSpot(username,type);
     }
 
-    public List<UserSpotEntity> getThumbSpot(String username){
-        return personalDao.findThumbSpot(username);
-    }
+//    public List<UserSpotEntity> getThumbSpot(String username){
+//        return personalDao.findThumbSpot(username);
+//    }
+    public Set getThumbSpot(String username){
+    return personalDao.findThumbSpot(username);
+}
 }

@@ -14,6 +14,10 @@ import service.FoodService;
 import service.SpotService;
 import service.UploadService;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * Created by AngelYang on 2015/6/12.
  */
@@ -27,34 +31,53 @@ public class ValidController {
     @Autowired
     SpotService spotService;
 
-    @RequestMapping(value = "/valid",method = RequestMethod.GET)
-    public String validate(@RequestParam(value = "userName",required = true)String userName,
-                           @RequestParam(value = "spotfood",required = true)String spotfood,
-                           @RequestParam(value = "type",required = true)String type,Model model){
+    @RequestMapping(value = "/valid", method = RequestMethod.GET)
+    public void validate(HttpServletResponse response ,HttpServletRequest request) throws IOException{
+        String userName = request.getParameter("username");
+        String spotfood = request.getParameter("spotfood");
+        String type = request.getParameter("type");
+        String yorn = request.getParameter("y_or_n");
         int valid;
         UploadEntity uploadEntity=uploadService.findUpload(userName,spotfood);
 
         if(type.equals("pictures")){
             valid=uploadEntity.getPvalid();
-            valid=Math.abs(valid - 1);  //0->1 1->0
-            uploadService.updateValid(uploadEntity, valid, type);
+            if (valid!=-1&&valid!=1){
+                if (yorn.equals("yes")){
+                    valid = 1;   //verified
+                    uploadService.updateValid(uploadEntity, valid, type);
+
+                }else{
+                    valid = -1;  //not verified
+                    uploadService.updateValid(uploadEntity, valid, type);
+                }
+            }else{
+
+            }
         }else{
             String description=uploadEntity.getDescription();
             valid=uploadEntity.getDvalid();
-            valid=Math.abs(valid-1);
-            uploadService.updateValid(uploadEntity, valid, type);
+            if (valid!=-1&&valid!=1){
+                if (yorn.equals("yes")){
+                    valid = 1;   //verified
+                    uploadService.updateValid(uploadEntity, valid, type);
+                    //Update Food Table and Spot Table
+                    FoodEntity foodEntity=foodService.getFoodDetail(spotfood);
+                    if(foodEntity!=null){
+                        foodService.updateDsp(foodEntity,description);
+                    }else {
+                        SpotEntity spotEntity=spotService.getSpotDetail(spotfood);
+                        spotService.updateDsp(spotEntity,description);
+                    }
 
-            //Update Food Table and Spot Table
-            FoodEntity foodEntity=foodService.getFoodDetail(spotfood);
-            if(foodEntity!=null){
-                foodService.updateDsp(foodEntity,description);
-            }else {
-                SpotEntity spotEntity=spotService.getSpotDetail(spotfood);
-                spotService.updateDsp(spotEntity,description);
+                }else {
+                    valid = -1;  //not verified
+                    uploadService.updateValid(uploadEntity, valid, type);
+                }
+            }else{
             }
-        }
 
-        model.addAttribute("valid",valid);
-        return "valid";
+        }
+        response.getWriter().append("123");
     }
 }

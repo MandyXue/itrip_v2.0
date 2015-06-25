@@ -8,7 +8,10 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Administrator on 2015/6/10.
@@ -39,7 +42,18 @@ public class PersonalDaoImpl implements PersonalDao {
         TypedQuery<UserSpotEntity> tq=em.createQuery(c);
         return tq.getResultList();
     }
-    public List<UserSpotEntity> findThumbSpot(String username){
+//    public List<UserSpotEntity> findThumbSpot(String username){
+//        CriteriaBuilder cb=em.getCriteriaBuilder();
+//        CriteriaQuery c=cb.createQuery(UserSpotEntity.class);
+//        Root<UserSpotEntity> user=c.from(UserSpotEntity.class);
+//        Path<String> un = user.get("username");
+//        Predicate p=cb.and(cb.equal(un,username));
+//        c.where(p);
+//        TypedQuery<UserSpotEntity> tq=em.createQuery(c);
+//        return tq.getResultList();
+//    }
+    public Set findThumbSpot(String username){
+        Set set=new HashSet();
         CriteriaBuilder cb=em.getCriteriaBuilder();
         CriteriaQuery c=cb.createQuery(UserSpotEntity.class);
         Root<UserSpotEntity> user=c.from(UserSpotEntity.class);
@@ -47,6 +61,11 @@ public class PersonalDaoImpl implements PersonalDao {
         Predicate p=cb.and(cb.equal(un,username));
         c.where(p);
         TypedQuery<UserSpotEntity> tq=em.createQuery(c);
-        return tq.getResultList();
+        Iterator<UserSpotEntity> iterator=tq.getResultList().iterator();
+        while (iterator.hasNext()) {
+            UserSpotEntity e=iterator.next();
+            set.add(e.getSpotname());
+        }
+        return set;
     }
 }

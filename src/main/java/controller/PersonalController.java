@@ -12,6 +12,7 @@ import service.PersonalService;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Administrator on 2015/6/10.
@@ -56,8 +57,9 @@ public class PersonalController {
         }else if (s_or_f.equals("spot")){
             model.addAttribute("s_or_f",s_or_f);
             if (type==null){
-                List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username);
-                model.addAttribute("personalSpot",thumbSpot);
+//                List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username);
+                Set thumbSpot=personalService.getThumbSpot(username);
+                model.addAttribute("personalSpot_set",thumbSpot);
                 return "personal_spot";
             }else{
                 List<UserSpotEntity> thumbSpot=personalService.getThumbSpot(username,type);

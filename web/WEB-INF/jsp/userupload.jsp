@@ -54,10 +54,20 @@
                     </ul>
                     <!-- get session -->
                     <c:if test="${sessionScope.get('userId')!=null}">
+
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="col-md-6"><a class="name-responsive" href="admin">
-                                <c:out value="${sessionScope.get('userId')}"/>
-                            </a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle name-responsive" data-toggle="dropdown" href="#" role="button"
+                                   aria-expanded="false">
+                                    <c:out value="${sessionScope.get('userId')}"></c:out>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
+                                    <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                    <li class="text-center"><a href="userupload">Upload</a></li>
+                                </ul>
+                            </li>
                             <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out"
                                                                                 aria-hidden="true"></span></a></li>
                         </ul>
@@ -107,7 +117,7 @@
                                                 <h4 class="modal-title" id="pictureLabel">${userupload.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-responsive" src="${bp}/upload/${userupload.pictures}">
+                                                <img class="img-responsive" src="${bp}/${userupload.pictures}">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

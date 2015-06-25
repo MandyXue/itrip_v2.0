@@ -30,6 +30,129 @@
     <link href="${bp}/css/sign.css" rel="stylesheet">
     <link href="${bp}/css/administrator.css" rel="stylesheet">
 
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+//        function change(){
+//             $.ajax( {
+//                url:'test',// 跳转到 action
+//                data:{},
+//                type:'post',
+//                dataType:'json',
+//                success:function(data) {
+//                    alert("ok");
+//                },
+//                error : function() {
+//                    alert("异常！");
+//                }
+//            });
+//
+//        }
+        function picture_yes(btn){
+            var username = $(btn).parent().prevAll("#username").text();
+            var spotfood = $(btn).parent().prevAll("#spotfood").text();
+            var currentBtn = $(btn);
+            var json = {username:username,spotfood:spotfood,type:"pictures",y_or_n:"yes"};
+            $.ajax( {
+                url:'valid',// 跳转到 action
+                data:json,
+                type:'get',
+                dataType:'json',
+                success:function(data) {
+                    var par = currentBtn.parent();
+                    par.empty();
+                    var newItem = $('<td>'
+                    +'<button type="button" class="btn btn-success btn-sm" disabled="disabled">'
+                    +'<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>'
+                    +'yes'
+                    +'</button>'
+                    +'</td> ');
+                    par.append(newItem);
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+        function picture_no(btn){
+            var username = $(btn).parent().prevAll("#username").text();
+            var spotfood = $(btn).parent().prevAll("#spotfood").text();
+            var currentBtn = $(btn);
+            var json = {username:username,spotfood:spotfood,type:"pictures",y_or_n:"no"};
+            $.ajax( {
+                url:'valid',// 跳转到 action
+                data:json,
+                type:'get',
+                dataType:'json',
+                success:function(data) {
+                    var par = currentBtn.parent();
+                    par.empty();
+                    var newItem = $('<td>'
+                    +'<button type="button" class="btn btn-danger btn-sm" disabled="disabled">'
+                    +'<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'
+                    +'no'
+                    +'</button>'
+                    +'</td> ');
+                    par.append(newItem);
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+        function desc_yes(btn){
+            var username = $(btn).parent().prevAll("#username").text();
+            var spotfood = $(btn).parent().prevAll("#spotfood").text();
+            var currentBtn = $(btn);
+            var json = {username:username,spotfood:spotfood,type:"description",y_or_n:"yes"};
+            $.ajax( {
+                url:'valid',// 跳转到 action
+                data:json,
+                type:'get',
+                dataType:'json',
+                success:function(data) {
+                    var par = currentBtn.parent();
+                    par.empty();
+                    var newItem = $('<td>'
+                    +'<button type="button" class="btn btn-success btn-sm" disabled="disabled">'
+                    +'<span class="glyphicon glyphicon-ok" aria-hidden="true"></span>'
+                    +'yes'
+                    +'</button>'
+                    +'</td> ');
+                    par.append(newItem);
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+        function desc_no(btn){
+            var username = $(btn).parent().prevAll("#username").text();
+            var spotfood = $(btn).parent().prevAll("#spotfood").text();
+            var currentBtn = $(btn);
+            var json = {username:username,spotfood:spotfood,type:"description",y_or_n:"no"};
+            $.ajax( {
+                url:'valid',// 跳转到 action
+                data:json,
+                type:'get',
+                dataType:'json',
+                success:function(data) {
+                    var par = currentBtn.parent();
+                    par.empty();
+                    var newItem = $('<td>'
+                    +'<button type="button" class="btn btn-danger btn-sm" disabled="disabled">'
+                    +'<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>'
+                    +'no'
+                    +'</button>'
+                    +'</td> ');
+                    par.append(newItem);
+                },
+                error : function() {
+                    alert("异常！");
+                }
+            });
+        }
+    </script>
+
 </head>
 
 <body>
@@ -80,7 +203,7 @@
         <%--<div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">--%>
             <h1 class="page-header">Administrator</h1>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="tableData">
                     <thead>
                     <tr>
                         <th>User Name</th>
@@ -94,8 +217,8 @@
                     <tbody>
                     <c:forEach var="uploadEntities" items="${requestScope.uploadEntities}">
                         <tr>
-                            <td>${uploadEntities.username}</td>
-                            <td>${uploadEntities.spotfood}</td>
+                            <td id="username">${uploadEntities.username}</td>
+                            <td id="spotfood">${uploadEntities.spotfood}</td>
                             <td>
                                 <%--<a href="#" class="link">${uploadEntities.pictures}</a>--%>
                                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#picture" data-whatever="@mdo">
@@ -109,7 +232,7 @@
                                                 <h4 class="modal-title" id="pictureLabel">${uploadEntities.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-responsive" src="${bp}/upload/${uploadEntities.pictures}">
+                                                <img class="img-responsive" src="${bp}/${uploadEntities.pictures}">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -118,17 +241,36 @@
                                     </div>
                                 </div>
                             </td>
-                            <%--<td><a href="valid?userName=${uploadEntities.username}&spotfood=${uploadEntities.spotfood}&type=pictures">${uploadEntities.pvalid}</a></td>--%>
-                            <td>
-                                <button type="button" class="btn btn-success btn-sm">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    yes
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm">
-                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    no
-                                </button>
-                            </td>
+                            <c:choose>
+                                <c:when test="${uploadEntities.pvalid==-1}">
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            no
+                                        </button>
+                                    </td>
+                                </c:when>
+                                <c:when test="${uploadEntities.pvalid==1}">
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            yes
+                                        </button>
+                                    </td>
+                                </c:when>
+                                <c:otherwise>
+                                    <td id="pic_button">
+                                        <button type="button" class="btn btn-success btn-sm" onclick="picture_yes(this)">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            yes
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="picture_no(this)">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            no
+                                        </button>
+                                    </td>
+                                </c:otherwise>
+                            </c:choose>
                             <td>
                                 <%--<a href="#" class="link">Description</a>--%>
                                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#description" data-whatever="@mdo">
@@ -152,16 +294,36 @@
                                 </div>
                             </td>
                             <%--<td><a href="valid?userName=${uploadEntities.username}&spotfood=${uploadEntities.spotfood}&type=description">${uploadEntities.dvalid}</a></td>--%>
-                            <td>
-                                <button type="button" class="btn btn-success btn-sm">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    yes
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm">
-                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    no
-                                </button>
-                            </td>
+                            <c:choose>
+                                <c:when test="${uploadEntities.dvalid==-1}">
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            no
+                                        </button>
+                                    </td>
+                                </c:when>
+                                <c:when test="${uploadEntities.dvalid==1}">
+                                    <td>
+                                        <button type="button" class="btn btn-success btn-sm" disabled="disabled">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            yes
+                                        </button>
+                                    </td>
+                                </c:when>
+                                <c:otherwise>
+                                    <td id="pic_button">
+                                        <button type="button" class="btn btn-success btn-sm" onclick="desc_yes(this)">
+                                            <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                                            yes
+                                        </button>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="desc_no(this)">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            no
+                                        </button>
+                                    </td>
+                                </c:otherwise>
+                            </c:choose>
                         </tr>
                     </c:forEach>
                     </tbody>
@@ -170,6 +332,7 @@
         <%--</div>--%>
     </div>
 </div>
+<%--<button onclick="change()">0</button>--%>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->

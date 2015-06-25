@@ -288,7 +288,7 @@
                                 </div>
                                 <c:forEach var="pic" items="${validFood}">
                                     <div class="item">
-                                        <img src="<c:out value="${bp}/upload/${pic.pictures}"/>" alt="pic-5">
+                                        <img src="<c:out value="${bp}/${pic.pictures}"/>" alt="pic-5">
                                         <div class="carousel-caption"></div>
                                     </div>
                                 </c:forEach>
