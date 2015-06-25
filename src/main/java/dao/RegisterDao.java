@@ -7,6 +7,7 @@ import entity.UsertableEntity;
  */
 public interface RegisterDao {
     String checkregister(String username, String password, String email);
+    String checkregister(String username, String password, String email, String password2);
 
 
     void create(UsertableEntity usertableEntity);

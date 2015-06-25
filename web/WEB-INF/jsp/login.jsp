@@ -1,5 +1,3 @@
-<%@ page import="org.springframework.web.context.request.SessionScope" %>
-<%@ page import="org.springframework.web.context.request.RequestScope" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -39,20 +37,22 @@
                                 + encodeURIComponent(username)
                                 + '&password='
                                 + encodeURIComponent(password);
-                        <%--var s="<%=request.getAttribute("name")%>";--%>
                         $.ajax({
                             url : $('#signIn').attr("action"),
                             data : data,
                             type : "GET",
                             success : function(response) {
-//                                $('#nameResult').replaceWith('<span id="nameResult">'+ response + '</span>');
                                 if(response=="success"){
                                     window.location.href = document.referrer;
-//                                    window.history.back();
-//                                    sessionStorage.setItem("userId",username);
-//                                    window.location.replace(location.href);
+                                }else if(response=="userWrong"){
+                                    $('#nameResult').replaceWith('<span id="nameResult"><span class="glyphicon glyphicon-remove" aria-hidden="true">user doesn\'t exist</span>');
+                                    $('#pwdResult').replaceWith('<span id="pwdResult"></span>');
+                                }else if(response=="pwdWrong"){
+                                    $('#pwdResult').replaceWith('<span id="pwdResult"><span class="glyphicon glyphicon-remove" aria-hidden="true">your password is wrong</span>');
+                                    $('#nameResult').replaceWith('<span id="nameResult"></span>');
                                 }else{
-                                    $('#pwdResult').replaceWith('<span id="pwdResult"><span class="glyphicon glyphicon-remove" aria-hidden="true"> your username or password is wrong</span>');
+                                    $('#pwdResult').replaceWith('<span id="pwdResult"><span class="glyphicon glyphicon-remove" aria-hidden="true">Invalid input</span>');
+                                    $('#nameResult').replaceWith('<span id="nameResult"></span>');
                                 }
                             },
                             error : function(xhr,status,error){
@@ -107,15 +107,13 @@
             <label for="username" class="text-left">Username</label>
             <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" autofocus required>
             <label class="invalid-input-alert">
-                <%--<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>--%>
-                <%--<span id="nameResult"></span>--%>
+                <span id="nameResult"></span>
             </label>
         </div>
         <div class="form-group">
             <label for="password" class="text-left">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
             <label class="invalid-input-alert">
-
                 <span id="pwdResult"></span>
             </label>
         </div>

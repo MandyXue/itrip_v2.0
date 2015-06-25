@@ -17,4 +17,8 @@ public class RegisterService {
     public String check(String username, String password, String email) {
         return registerDao.checkregister(username, password, email);
     }
+
+    public String check(String username, String password, String email, String password2) {
+        return registerDao.checkregister(username, password, email,password2);
+    }
 }

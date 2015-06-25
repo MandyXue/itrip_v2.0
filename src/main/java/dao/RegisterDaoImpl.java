@@ -57,4 +57,34 @@ public class RegisterDaoImpl implements RegisterDao {
             return username;
         }
     }
+
+    public String checkregister(String username, String password, String email, String password2) {
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery c = cb.createQuery(UsertableEntity.class);
+        Root<UsertableEntity> user = c.from(UsertableEntity.class);
+        Path<String> un = user.get("username");
+        Path<String> el = user.get("email");
+        Predicate p_name = cb.equal(un, username);
+        c.where(p_name);
+        TypedQuery<UsertableEntity> tq_name = em.createQuery(c);
+        if (!(tq_name.getResultList()).isEmpty()){
+            return "userExist";
+        }else{
+            Predicate p_email = cb.equal(el, email);
+            c.where(p_email);
+            TypedQuery<UsertableEntity> tq_email = em.createQuery(c);
+            if (!(tq_email.getResultList()).isEmpty()){
+                return "emailExist";
+            }else if(!password2.equals(password)){
+                return "pwdWrong";
+            }else {
+                UsertableEntity newuser = new UsertableEntity();
+                newuser.setUsername(username);
+                newuser.setPassword(password);
+                newuser.setEmail(email);
+                create(newuser);
+                return "success";
+            }
+        }
+    }
 }

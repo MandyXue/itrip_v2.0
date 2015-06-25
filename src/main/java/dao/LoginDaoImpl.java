@@ -1,5 +1,6 @@
 package dao;
 
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import entity.UsertableEntity;
 import org.springframework.stereotype.Repository;
 
@@ -7,6 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
+import java.lang.reflect.Type;
 
 
 /**
@@ -39,12 +41,20 @@ public class LoginDaoImpl implements LoginDao {
         Root<UsertableEntity> user = c.from(UsertableEntity.class);
         Path<String> un = user.get("username");
         Path<String> pw = user.get("password");
-        Predicate p = cb.and(cb.equal(un, username), cb.equal(pw, password));
-        c.where(p);
-        TypedQuery<UsertableEntity> tq = em.createQuery(c);
-        if (!(tq.getResultList()).isEmpty())
-            return "success";
-        else
-            return "fail";
+//        check username first
+        Predicate p_name = cb.and(cb.equal(un,username));
+        c.where(p_name);
+        TypedQuery<UsertableEntity> tq_name = em.createQuery(c);
+        if (tq_name.getResultList().isEmpty()){
+            return "userWrong";
+        }else{
+            Predicate p = cb.and(cb.equal(un, username), cb.equal(pw, password));
+            c.where(p);
+            TypedQuery<UsertableEntity> tq = em.createQuery(c);
+            if (!(tq.getResultList()).isEmpty())
+                return "success";
+            else
+                return "pwdWrong";
+        }
     }
 }
