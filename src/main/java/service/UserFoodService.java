@@ -1,7 +1,11 @@
 package service;
 
+import dao.FoodDao;
+import dao.LoginDao;
 import dao.UserFoodDao;
+import entity.FoodEntity;
 import entity.UserFoodEntity;
+import entity.UsertableEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

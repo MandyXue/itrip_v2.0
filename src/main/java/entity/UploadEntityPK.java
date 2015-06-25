@@ -5,13 +5,11 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by mandyxue on 15/6/18.
+ * Created by mandyxue on 15/6/25.
  */
 public class UploadEntityPK implements Serializable {
     private String username;
     private String spotfood;
-
-
 
     @Column(name = "username", nullable = false, insertable = true, updatable = true, length = 15)
     @Id

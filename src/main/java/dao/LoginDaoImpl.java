@@ -1,6 +1,5 @@
 package dao;
 
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import entity.UsertableEntity;
 import org.springframework.stereotype.Repository;
 
@@ -8,7 +7,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
-import java.lang.reflect.Type;
 
 
 /**
@@ -56,5 +54,9 @@ public class LoginDaoImpl implements LoginDao {
             else
                 return "pwdWrong";
         }
+    }
+
+    public UsertableEntity findUser(String userName){
+        return em.find(UsertableEntity.class, userName);
     }
 }

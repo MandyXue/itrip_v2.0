@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1151506822">
+  <component name="DataSourceManagerImpl" format="xml" hash="2804108012">
     <data-source source="LOCAL" name="ProjectPU/EclipseLink" uuid="ff28df0b-82fc-4cc6-877e-64c114294f96">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -19,11 +19,11 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="MySQL - itripdb@localhost" uuid="a49a9066-7c96-4a02-9eaf-84bf376d1610">
+    <data-source source="LOCAL" name="MySQL - itrip@localhost" uuid="e605ae65-5f8f-455d-812d-29736f8a0acb">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/itripdb</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/itrip</jdbc-url>
       <driver-properties>
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />

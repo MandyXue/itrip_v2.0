@@ -3,10 +3,10 @@ package entity;
 import javax.persistence.*;
 
 /**
- * Created by mandyxue on 15/6/10.
+ * Created by mandyxue on 15/6/25.
  */
 @Entity
-@Table(name = "food", schema = "", catalog = "itripdb")
+@Table(name = "food", schema = "", catalog = "itrip")
 public class FoodEntity {
     private String name;
     private String cnName;

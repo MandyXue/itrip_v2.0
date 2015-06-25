@@ -17,5 +17,6 @@ public interface UploadDao {
     List<UploadEntity> findAllUploads();
     UploadEntity findUpload(String userName, String spotfood);
     List<UploadEntity> getValid(String spotfood);
-
+    String check(String username,String spotfood);
+    List<UploadEntity> personal(String username);
 }

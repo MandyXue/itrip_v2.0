@@ -3,10 +3,10 @@ package entity;
 import javax.persistence.*;
 
 /**
- * Created by mandyxue on 15/6/18.
+ * Created by mandyxue on 15/6/25.
  */
 @Entity
-@Table(name = "upload", schema = "", catalog = "itripdb")
+@Table(name = "upload", schema = "", catalog = "itrip")
 @IdClass(UploadEntityPK.class)
 public class UploadEntity {
     private String username;
@@ -116,5 +116,3 @@ public class UploadEntity {
         return result;
     }
 }
-
-//TODO: 用户上传页面 -1 未通过 0 待审核 1 已通过

@@ -8,10 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import service.RegisterService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-import java.util.Enumeration;
 
 /**
  * Created by Administrator on 2015/6/5.

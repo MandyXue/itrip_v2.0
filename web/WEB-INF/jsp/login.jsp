@@ -140,14 +140,6 @@
 <!-- sign up, sign in js -->
 <script src="${bp}/js/sign.js"></script>
 
-<%--<h1>Sign In</h1>--%>
-<%--<form action="login" method="post">--%>
-<%--<input type="text" name="username" class="username" placeholder="username">--%>
-<%--<input type="password" name="password" class="password" placeholder="password">--%>
-<%--<button type="submit">submit</button>--%>
-<%--<div class="error"><span>+</span></div>--%>
-<%--</form>--%>
-
 
 </body>
 

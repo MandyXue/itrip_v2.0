@@ -83,7 +83,6 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>User Name</th>
                         <th>Spot/Food</th>
                         <th>Picture</th>
                         <th>Y/N</th>
@@ -92,10 +91,9 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <c:forEach var="uploadEntities" items="${requestScope.uploadEntities}">
+                    <c:forEach var="userupload" items="${requestScope.userUpload}">
                         <tr>
-                            <td>${uploadEntities.username}</td>
-                            <td>${uploadEntities.spotfood}</td>
+                            <td>${userupload.spotfood}</td>
                             <td>
                                 <%--<a href="#" class="link">${uploadEntities.pictures}</a>--%>
                                 <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#picture" data-whatever="@mdo">
@@ -106,10 +104,10 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h4 class="modal-title" id="pictureLabel">${uploadEntities.spotfood}</h4>
+                                                <h4 class="modal-title" id="pictureLabel">${userupload.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-responsive" src="${bp}/upload/${uploadEntities.pictures}">
+                                                <img class="img-responsive" src="${bp}/upload/${userupload.pictures}">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -120,14 +118,17 @@
                             </td>
                             <%--<td><a href="valid?userName=${uploadEntities.username}&spotfood=${uploadEntities.spotfood}&type=pictures">${uploadEntities.pvalid}</a></td>--%>
                             <td>
-                                <button type="button" class="btn btn-success btn-sm">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    yes
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm">
-                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    no
-                                </button>
+                                <c:choose>
+                                    <c:when test="${userupload.pvalid==-1}">
+                                        not passed
+                                    </c:when>
+                                    <c:when test="${userupload.pvalid==1}">
+                                        passed
+                                    </c:when>
+                                    <c:otherwise>
+                                        not verified
+                                    </c:otherwise>
+                                </c:choose>
                             </td>
                             <td>
                                 <%--<a href="#" class="link">Description</a>--%>
@@ -139,10 +140,10 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                <h4 class="modal-title" id="exampleModalLabel">${uploadEntities.spotfood}</h4>
+                                                <h4 class="modal-title" id="exampleModalLabel">${userupload.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <p>${uploadEntities.description}</p>
+                                                <p>${userupload.description}</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -153,14 +154,17 @@
                             </td>
                             <%--<td><a href="valid?userName=${uploadEntities.username}&spotfood=${uploadEntities.spotfood}&type=description">${uploadEntities.dvalid}</a></td>--%>
                             <td>
-                                <button type="button" class="btn btn-success btn-sm">
-                                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
-                                    yes
-                                </button>
-                                <button type="button" class="btn btn-danger btn-sm">
-                                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                                    no
-                                </button>
+                                <c:choose>
+                                    <c:when test="${userupload.dvalid==-1}">
+                                        not passed
+                                    </c:when>
+                                    <c:when test="${userupload.dvalid==1}">
+                                        passed
+                                    </c:when>
+                                    <c:otherwise>
+                                        not verified
+                                    </c:otherwise>
+                                </c:choose>
                             </td>
                         </tr>
                     </c:forEach>
@@ -175,10 +179,12 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-<script src="${bp}/external/dist/js/bootstrap.js"></script>
+<script src="${bp}/external/dist/js/bootstrap.min.js"></script>
 <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
 <script src="${bp}/external/bootstrap-3.3.4/docs/assets/js/vendor/holder.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <script src="${bp}/external/bootstrap-3.3.4/docs/assets/js/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
+
+<%--TODO:ajax 对／错 button ＝》替换成一个button--%>

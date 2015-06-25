@@ -67,5 +67,31 @@ public class UploadDaoImpl implements UploadDao {
         return tq.getResultList();
     }
 
+    @Override
+    public String check(String username,String spotfood){
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery c = cb.createQuery(UploadEntity.class);
+        Root<UploadEntity> up = c.from(UploadEntity.class);
+        Path<String> un = up.get("username");
+        Path<String> sf = up.get("spotfood");
+        Predicate p = cb.and(cb.equal(un, username), cb.equal(sf, spotfood));
+        c.where(p);
+        TypedQuery<UploadEntity> tq = em.createQuery(c);
+        if (!(tq.getResultList()).isEmpty())
+            return "true";
+        else
+            return "false";
+    }
 
+    @Override
+    public List<UploadEntity> personal(String username){
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery c = cb.createQuery(UploadEntity.class);
+        Root<UploadEntity> up = c.from(UploadEntity.class);
+        Path<String> un = up.get("username");
+        Predicate p=cb.equal(un, username);
+        c.where(p);
+        TypedQuery<UploadEntity> tq = em.createQuery(c);
+        return tq.getResultList();
+    }
 }

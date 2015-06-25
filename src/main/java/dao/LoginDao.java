@@ -14,4 +14,6 @@ public interface LoginDao {
     void remove(UsertableEntity usertableEntity);
 
     void update(UsertableEntity usertableEntity);
+
+    UsertableEntity findUser(String userName);
 }

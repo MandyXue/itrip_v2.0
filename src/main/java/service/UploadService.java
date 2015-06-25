@@ -41,5 +41,11 @@ public class UploadService {
         return uploadDao.getValid(spotfood);
     }
 
+    public String getCheck(String username,String spotfood){
+        return uploadDao.check(username,spotfood);
+    }
 
+    public List<UploadEntity> getpersonal(String username){
+        return uploadDao.personal(username);
+    }
 }

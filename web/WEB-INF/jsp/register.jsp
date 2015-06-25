@@ -46,22 +46,22 @@
                                 + encodeURIComponent(password)
                                 + '&password2='
                                 + encodeURIComponent(password2);
-//                        if(username == '') {
-//                            alert("用户名不能为空");
-//                            return false;
-//                        }
-//                        if(email == '') {
-//                            alert("email不能为空");
-//                            return false;
-//                        }
-//                        if(password == '') {
-//                            alert("密码不能为空");
-//                            return false;
-//                        }
-//                        if(password2 == '') {
-//                            alert("重复输入密码不能为空");
-//                            return false;
-//                        }
+                        if(username == '') {
+                            alert("用户名不能为空");
+                            return false;
+                        }
+                        if(email == '') {
+                            alert("email不能为空");
+                            return false;
+                        }
+                        if(password == '') {
+                            alert("密码不能为空");
+                            return false;
+                        }
+                        if(password2 == '') {
+                            alert("重复输入密码不能为空");
+                            return false;
+                        }
                         $.ajax({
                             url : $('#register').attr("action"),
                             data : data,
@@ -134,28 +134,25 @@
     <div class="container">
         <h1 class="text-center top-and-bottom register">Start Your journey in iTrip</h1>
     </div>
-    <form:form id="register" action="register/result" method="post" commandName="register">
+    <form id="register" action="register/result" method="post">
         <div class="form-group">
             <label for="username" class="text-left">Username</label>
-            <form:input path="username" type="text" class="form-control" id="username" name="username" placeholder="Enter username"/>
-                <form:errors path="username" cssClass="error"/>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter username"/>
             <label class="invalid-input-alert">
                 <span id="nameResult"></span>
             </label>
         </div>
         <div class="form-group">
             <label for="email" class="text-left">Email Address</label>
-            <form:input path="email" type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
-            <form:errors path="email" cssClass="error"/>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"/>
                 <label class="invalid-input-alert">
                 <span id="emailResult"></span>
             </label>
         </div>
         <div class="form-group">
             <label for="password" class="text-left">Password</label>
-            <form:input path="password" type="password" class="form-control" id="password" name="password" placeholder="Password"/>
-            <form:errors path="password" cssClass="error"/>
-                <label class="invalid-input-alert"></label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
+            <label class="invalid-input-alert"></label>
         </div>
         <div class="form-group">
             <label for="password2" class="text-left">Confrim your password</label>
@@ -166,7 +163,7 @@
             </label>
         </div>
         <button type="submit" class="btn btn-primary top-and-bottom submit">Join iTrip</button>
-    </form:form>
+    </form>
 </div>
 <footer class="signin-footer">
     <div class="signin-footer-text">

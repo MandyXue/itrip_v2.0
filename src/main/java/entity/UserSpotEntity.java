@@ -4,10 +4,10 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by mandyxue on 15/6/24.
+ * Created by mandyxue on 15/6/25.
  */
 @Entity
-@Table(name = "user_spot", schema = "", catalog = "itripdb")
+@Table(name = "user_spot", schema = "", catalog = "itrip")
 @IdClass(UserSpotEntityPK.class)
 public class UserSpotEntity {
     private String username;

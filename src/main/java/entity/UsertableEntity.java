@@ -1,21 +1,15 @@
 package entity;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
 import javax.persistence.*;
-import javax.validation.constraints.Pattern;
 
 /**
- * Created by mandyxue on 15/6/10.
+ * Created by mandyxue on 15/6/25.
  */
 @Entity
-@Table(name = "usertable", schema = "", catalog = "itripdb")
+@Table(name = "usertable", schema = "", catalog = "itrip")
 public class UsertableEntity {
-    @NotEmpty(message = "Please enter user name")
     private String username;
-    @NotEmpty(message = "please enter password")
     private String password;
-    @Pattern(regexp = "[-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\\.[a-zA-Z]{2,4}")
     private String email;
 
     @Id

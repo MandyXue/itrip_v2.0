@@ -61,6 +61,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
                                 <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                <li class="text-center"><a href="userupload">Upload</a></li>
                             </ul>
                         </li>
                         <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>

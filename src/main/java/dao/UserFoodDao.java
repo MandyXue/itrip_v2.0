@@ -15,4 +15,5 @@ public interface UserFoodDao {
     void update(UserFoodEntity userFoodEntity);
 
     List<UserFoodEntity> findUserFood(String userName, String foodName);
+
 }

@@ -5,7 +5,6 @@ import entity.UploadEntity;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -57,14 +56,10 @@ public class UploadController extends HttpServlet {
             em.getTransaction().commit();
             request.setAttribute("upload","success");
 
-            request.getRequestDispatcher("WEB-INF/jsp/uploadsuccess.jsp").forward(request,response);
         } else {
             request.setAttribute("upload","fail");
-            request.getRequestDispatcher("WEB-INF/jsp/uploadfail.jsp").forward(request,response);
         }
 
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendRedirect(request.getHeader("Referer"));
     }
 }

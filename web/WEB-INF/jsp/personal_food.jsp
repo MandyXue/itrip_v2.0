@@ -60,6 +60,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
                                 <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                <li class="text-center"><a href="userupload">Upload</a></li>
                             </ul>
                         </li>
                         <li><a class="name-responsive" href="signout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
@@ -81,7 +82,7 @@
         <!-- Thumb Items -->
         <c:forEach var="personalFood" items="${requestScope.personalFood}" >
             <article class="item thumb" data-width="282">
-                <h2 class="name-text"><c:out value="${personalFood.foodname}"/></h2>
+                <h2 class="name-text"><c:out value="${personalFood.foodByFoodName.cnName}"/></h2>
                 <a href="food?foodName=${personalFood.foodname}&province=innermongolia">
                     <img src="<c:out value="${bp}/images/food/${personalFood.foodname}/1.jpg"/>" width="200" height="150">
                 </a>

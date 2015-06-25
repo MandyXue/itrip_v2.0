@@ -5,13 +5,13 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>entity.FoodEntity</class>
         <class>entity.SpotEntity</class>
+        <class>entity.UploadEntity</class>
         <class>entity.UserFoodEntity</class>
         <class>entity.UserSpotEntity</class>
         <class>entity.UsertableEntity</class>
-        <class>entity.UploadEntity</class>
         <properties>
             <!--编码问题-->
-            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/itripdb?characterEncoding=utf-8"/>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/itrip?characterEncoding=utf-8"/>
             <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
             <property name="eclipselink.jdbc.user" value="root"/>
             <property name="eclipselink.jdbc.password" value=""/>

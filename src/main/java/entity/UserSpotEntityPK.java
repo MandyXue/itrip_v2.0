@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by mandyxue on 15/6/24.
+ * Created by mandyxue on 15/6/25.
  */
 public class UserSpotEntityPK implements Serializable {
     private String username;

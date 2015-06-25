@@ -1,7 +1,6 @@
 package controller;
 
 import entity.FoodEntity;
-import org.eclipse.persistence.sessions.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -50,5 +49,3 @@ public class FoodThumbController {
         return Integer.toString(foodThumbs);
     }
 }
-
-//TODO:delete thumb

@@ -71,6 +71,7 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li class="text-center"><a href="personal?s_or_f=spot">Trip</a></li>
                                             <li class="text-center"><a href="personal?s_or_f=food">Food</a></li>
+                                            <li class="text-center"><a href="userupload">Upload</a></li>
                                         </ul>
                                     </li>
                                 </c:otherwise>
@@ -112,6 +113,18 @@
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+            <c:if test="${requestScope.get('upload').equals('success')}">
+                <div class="alert alert-success">
+                    <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                    <strong>Upload success!</strong>
+                </div><!--/alert banner-->
+            </c:if>
+            <c:if test="${requestScope.get('upload').equals('fail')}">
+                <div class="alert alert-fail">
+                    <a class="close" data-dismiss="alert" href="#" aria-hidden="true">&times;</a>
+                    <strong>Upload fail!</strong>
+                </div><!--/alert banner-->
+            </c:if>
             <%--get session--%>
             <c:if test="${sessionScope.get('userId')!=null}">
                 <div class="row">
@@ -127,9 +140,16 @@
                     </div>
                     <div class="col-md-5">
                         <h1 class="trip-header text-left">
-                            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
-                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add
-                            </button>
+                            <c:if test="${requestScope.get('checkup').equals('false')}">
+                                <button id="uploadBtn" type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Upload
+                                </button>
+                            </c:if>
+                            <c:if test="${requestScope.get('checkup').equals('true')}">
+                                <button id="uploadBtn" type="button" class="btn btn-default" disabled="disabled" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
+                                    Has Uploaded
+                                </button>
+                            </c:if>
                             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">

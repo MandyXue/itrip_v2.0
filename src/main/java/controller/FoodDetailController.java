@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import service.*;
 
 import javax.servlet.http.HttpSession;
@@ -19,6 +20,7 @@ import java.util.List;
  * Created by AngelYang on 2015/6/4.
  */
 @Controller
+@SessionAttributes("userId")
 public class FoodDetailController {
     @Autowired
     private FoodService foodService;
@@ -29,10 +31,19 @@ public class FoodDetailController {
     @Autowired
     private UploadService uploadService;
 
+    private String username;
+    private String spotfood;
+
     @RequestMapping(value = "/food", method = RequestMethod.GET)
     public String showFood(Model model,
                            @RequestParam(value = "province", required = true) String province,
                            @RequestParam(value = "foodName", required = true) String foodName,HttpSession session) {
+
+        username= (String) session.getAttribute("userId");
+        spotfood= foodName;
+        String checkup = uploadService.getCheck(username,spotfood);
+        model.addAttribute("checkup",checkup);
+
         FoodEntity foodDetail = foodService.getFoodDetail(foodName);
         model.addAttribute("foodDetail", foodDetail);
 
@@ -44,8 +55,6 @@ public class FoodDetailController {
 
         String type = "food";
         model.addAttribute("type", type);
-
-        //TODO: pvalid dvalid -1,0,1
 
         String userName=(String)session.getAttribute("userId");
         boolean userFood=userFoodService.findUserFood(userName,foodName);

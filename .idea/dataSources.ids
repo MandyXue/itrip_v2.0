@@ -7,14 +7,14 @@
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
   </data-source>
-  <data-source name="MySQL - itripdb@localhost" uuid="a49a9066-7c96-4a02-9eaf-84bf376d1610">
+  <data-source name="MySQL - itrip@localhost" uuid="e605ae65-5f8f-455d-812d-29736f8a0acb">
     <database-info product="MySQL" version="5.6.24" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
-    <schema name="" catalog="itripdb"/>
-    <table name="food" schema="" catalog="itripdb" type="TABLE">
+    <schema name="" catalog="itrip"/>
+    <table name="food" schema="" catalog="itrip" type="TABLE">
       <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="cn_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="province" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
@@ -22,7 +22,7 @@
       <column name="thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="name"/>
     </table>
-    <table name="spot" schema="" catalog="itripdb" type="TABLE">
+    <table name="spot" schema="" catalog="itrip" type="TABLE">
       <column name="name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="cn_name" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="province" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
@@ -34,7 +34,7 @@
       <column name="family_thumbs" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="name"/>
     </table>
-    <table name="upload" schema="" catalog="itripdb" type="TABLE">
+    <table name="upload" schema="" catalog="itrip" type="TABLE">
       <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <column name="spotfood" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="pictures" sqlType="VARCHAR" precision="50" scale="0" nullable="true" jdbcType="12"/>
@@ -43,20 +43,20 @@
       <column name="dvalid" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="username,spotfood"/>
     </table>
-    <table name="user_food" schema="" catalog="itripdb" type="TABLE">
+    <table name="user_food" schema="" catalog="itrip" type="TABLE">
       <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <column name="foodname" sqlType="VARCHAR" precision="50" scale="0" nullable="false" jdbcType="12"/>
       <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
       <primary-key name="PRIMARY" columns="username,foodname"/>
     </table>
-    <table name="user_spot" schema="" catalog="itripdb" type="TABLE">
+    <table name="user_spot" schema="" catalog="itrip" type="TABLE">
       <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <column name="spotname" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <column name="date" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
       <column name="type" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="username,spotname,type"/>
     </table>
-    <table name="usertable" schema="" catalog="itripdb" type="TABLE">
+    <table name="usertable" schema="" catalog="itrip" type="TABLE">
       <column name="username" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
       <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>

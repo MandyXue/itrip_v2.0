@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 /**
- * Created by AngelYang on 2015/6/4.
+ * Created by mandyxue on 15/6/25.
  */
 public class UserFoodEntityPK implements Serializable {
     private String username;
