@@ -6,9 +6,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 /**
@@ -44,7 +42,10 @@ public class FoodDaoImpl implements FoodDao {
         CriteriaQuery c = cb.createQuery(FoodEntity.class);
         Root<FoodEntity> food = c.from(FoodEntity.class);
 //        c.where(cb.equal(food.get(province),province));
-        c.select(food);
+        Path<String> province1 = food.get("province");
+        Predicate p = cb.equal(province1, province);
+        c.where(p);
+//        c.select(food);
         TypedQuery<FoodEntity> tq = em.createQuery(c);
         return tq.getResultList();
     }

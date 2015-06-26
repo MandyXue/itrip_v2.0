@@ -47,19 +47,27 @@
                                 + '&password2='
                                 + encodeURIComponent(password2);
                         if(username == '') {
-                            alert("用户名不能为空");
+                            $('#nameResult').replaceWith('<span id="nameResult"><span class="glyphicon glyphicon-remove" aria-hidden="true">Username cannot be empty</span>');
+                            $('#pwd2Result').replaceWith('<span id="pwd2Result"></span>');
+                            $('#emailResult').replaceWith('<span id="emailResult"></span>');
                             return false;
                         }
                         if(email == '') {
-                            alert("email不能为空");
+                            $('#emailResult').replaceWith('<span id="emailResult"><span class="glyphicon glyphicon-remove" aria-hidden="true">Email cannot be empty</span>');
+                            $('#nameResult').replaceWith('<span id="nameResult"></span>');
+                            $('#pwd2Result').replaceWith('<span id="pwd2Result"></span>');
                             return false;
                         }
                         if(password == '') {
-                            alert("密码不能为空");
+                            $('#pwdResult').replaceWith('<span id="pwd2Result"><span class="glyphicon glyphicon-remove" aria-hidden="true">password cannot be empty</span>');
+                            $('#nameResult').replaceWith('<span id="nameResult"></span>');
+                            $('#emailResult').replaceWith('<span id="emailResult"></span>');
                             return false;
                         }
                         if(password2 == '') {
-                            alert("重复输入密码不能为空");
+                            $('#pwd2Result').replaceWith('<span id="pwd2Result"><span class="glyphicon glyphicon-remove" aria-hidden="true">Confrim cannot be empty</span>');
+                            $('#nameResult').replaceWith('<span id="nameResult"></span>');
+                            $('#emailResult').replaceWith('<span id="emailResult"></span>');
                             return false;
                         }
                         $.ajax({
@@ -152,7 +160,9 @@
         <div class="form-group">
             <label for="password" class="text-left">Password</label>
             <input type="password" class="form-control" id="password" name="password" placeholder="Password"/>
-            <label class="invalid-input-alert"></label>
+            <label class="invalid-input-alert">
+                <span id="pwdResult"></span>
+            </label>
         </div>
         <div class="form-group">
             <label for="password2" class="text-left">Confrim your password</label>

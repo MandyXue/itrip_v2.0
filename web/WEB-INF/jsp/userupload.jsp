@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>administrator</title>
+    <title>User Upload</title>
     <%--set base path--%>
     <c:set var="bp" value="${pageContext.request.contextPath}"/>
 
@@ -88,7 +88,7 @@
 <div class="container">
     <div class="row">
         <%--<div class="col-sm-12 col-sm-offset-3 col-md-10 col-md-offset-2 main">--%>
-            <h1 class="page-header">Administrator</h1>
+            <h1 class="page-header">${sessionScope.get("userId")}</h1>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -117,7 +117,7 @@
                                                 <h4 class="modal-title" id="pictureLabel">${userupload.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-responsive" src="${bp}/${userupload.pictures}">
+                                                <img class="img-responsive" src="${bp}/upload/${userupload.pictures}">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

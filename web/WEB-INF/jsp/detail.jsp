@@ -102,13 +102,13 @@
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Trip</a></li>
                 <c:forEach var="spots" items="${requestScope.spots}">
-                    <li><a href="spot?spotName=${spots.name}&province=${requestScope.province}">${spots.cnName}</a></li>
+                    <li><a href="spot?spotName=${spots.name}&province=${spots.province}">${spots.cnName}</a></li>
                 </c:forEach>
             </ul>
             <ul class="nav nav-sidebar">
                 <li class="active"><a href="#">Food</a></li>
                 <c:forEach var="foods" items="${requestScope.foods}">
-                    <li><a href="food?foodName=${foods.name}&province=$${requestScope.province}">${foods.cnName}</a></li>
+                    <li><a href="food?foodName=${foods.name}&province=${foods.province}">${foods.cnName}</a></li>
                 </c:forEach>
             </ul>
         </div>

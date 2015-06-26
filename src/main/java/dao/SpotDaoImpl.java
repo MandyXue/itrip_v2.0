@@ -7,9 +7,7 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
+import javax.persistence.criteria.*;
 import java.util.List;
 
 /**
@@ -45,8 +43,10 @@ public class SpotDaoImpl implements SpotDao {
         CriteriaBuilder cb = em.getCriteriaBuilder();
         CriteriaQuery c = cb.createQuery(SpotEntity.class);
         Root<SpotEntity> spot = c.from(SpotEntity.class);
+        Path<String> province1 = spot.get("province");
+        Predicate p = cb.equal(province1, province);
 //        c.where(cb.equal(spot.get(province),province));
-        c.select(spot);
+        c.where(p);
         TypedQuery<SpotEntity> tq = em.createQuery(c);
         return tq.getResultList();
     }

@@ -144,7 +144,7 @@
             <c:forEach var="personalSpot" items="${requestScope.personalSpot_set}" >
                 <article class="item thumb" data-width="300">
                     <h2 class="name-text"><c:out value="${personalSpot}"/></h2>
-                    <a href="spot?spotName=${personalSpot}&province=innermongolia">
+                    <a href="spot?spotName=${personalSpot}&province=sichuan">
                         <img src="<c:out value="${bp}/images/trip/${personalSpot}/1.jpg"/>" width="200" height="150">
                     </a>
                 </article>
@@ -154,7 +154,7 @@
             <c:forEach var="personalSpot" items="${requestScope.personalSpot}" >
                 <article class="item thumb" data-width="300">
                     <h2 class="name-text"><c:out value="${personalSpot.spotname}"/></h2>
-                    <a href="spot?spotName=${personalSpot.spotname}&province=innermongolia">
+                    <a href="spot?spotName=${personalSpot.spotname}&province=sichuan">
                         <img src="<c:out value="${bp}/images/trip/${personalSpot.spotname}/1.jpg"/>" width="200" height="150">
                     </a>
                 </article>

@@ -83,7 +83,7 @@
         <c:forEach var="personalFood" items="${requestScope.personalFood}" >
             <article class="item thumb" data-width="282">
                 <h2 class="name-text"><c:out value="${personalFood.foodname}"/></h2>
-                <a href="food?foodName=${personalFood.foodname}&province=innermongolia">
+                <a href="food?foodName=${personalFood.foodname}&province=sichuan">
                     <img src="<c:out value="${bp}/images/food/${personalFood.foodname}/1.jpg"/>" width="200" height="150">
                 </a>
             </article>

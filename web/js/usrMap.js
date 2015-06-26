@@ -108,8 +108,8 @@ var anhuiDataProvider = {
             title: "黄山",
             latitude: 30.134073,
             longitude: 118.176924,
-            color: "#ffffff"
-            // url: "spot?spotName=huangshan&province=anhui"
+            color: "#ffffff",
+            url: "spot?spotName=huangshan&province=anhui"
         }
     ]
 }
@@ -129,8 +129,8 @@ var beijingDataProvider = {
             title: "故宫",
             latitude: 39.91927,
             longitude: 116.40357,
-            color: "#ffffff"
-            // url: "spot?spotName=gugong&province=beijing"
+            color: "#ffffff",
+            url: "spot?spotName=gugong&province=beijing"
         }
     ]
 }
@@ -150,8 +150,8 @@ var chongqingDataProvider = {
             title: "芙蓉洞",
             latitude: 29.226283,
             longitude: 107.915492,
-            color: "#ffffff"
-            // url: "spot?spotName=furongdong&province=chongqing"
+            color: "#ffffff",
+            url: "spot?spotName=furongdong&province=chongqing"
         },
         {
             svgPath: targetSVG,
@@ -160,8 +160,8 @@ var chongqingDataProvider = {
             title: "武隆天坑",
             latitude: 29.43744,
             longitude: 107.807798,
-            color: "#ffffff"
-            // url: "spot?spotName=wulongtiankeng&province=chongqing"
+            color: "#ffffff",
+            url: "spot?spotName=wulongtiankeng&province=chongqing"
         },
         {
             svgPath: targetSVG,
@@ -170,8 +170,8 @@ var chongqingDataProvider = {
             title: "仙女山",
             latitude: 29.502711,
             longitude: 107.744671,
-            color: "#ffffff"
-            // url: "spot?spotName=xiannvshan&province=chongqing"
+            color: "#ffffff",
+            url: "spot?spotName=xiannvshan&province=chongqing"
         },
         {
             svgPath: targetSVG,
@@ -180,8 +180,8 @@ var chongqingDataProvider = {
             title: "白公馆",
             latitude: 29.582539,
             longitude: 106.439401,
-            color: "#ffffff"
-            // url: "spot?spotName=baigongguan&province=chongqing"
+            color: "#ffffff",
+            url: "spot?spotName=baigongguan&province=chongqing"
         },
         {
             svgPath: targetSVG,
@@ -190,8 +190,8 @@ var chongqingDataProvider = {
             title: "丰都鬼城",
             latitude: 29.891926,
             longitude: 107.731507,
-            color: "#ffffff"
-            // url: "spot?spotName=fengduguicheng&province=chongqing"
+            color: "#ffffff",
+            url: "spot?spotName=fengduguicheng&province=chongqing"
         }
     ]
 }
@@ -211,8 +211,8 @@ var fujianDataProvider = {
             title: "鼓浪屿",
             latitude: 24.691943,
             longitude: 117.800903,
-            color: "#ffffff"
-            // url: "spot?spotName=gulangyu&province=fujian"
+            color: "#ffffff",
+            url: "spot?spotName=gulangyu&province=fujian"
         },
         {
             svgPath: targetSVG,
@@ -221,8 +221,8 @@ var fujianDataProvider = {
             title: "武夷山",
             latitude: 27.762712,
             longitude: 118.046038,
-            color: "#ffffff"
-            // url: "spot?spotName=wuyishan&province=fujian"
+            color: "#ffffff",
+            url: "spot?spotName=wuyishan&province=fujian"
         },
         {
             svgPath: targetSVG,
@@ -231,8 +231,8 @@ var fujianDataProvider = {
             title: "清源山",
             latitude: 24.949825,
             longitude: 118.608168,
-            color: "#ffffff"
-            // url: "spot?spotName=qingyuanshan&province=fujian"
+            color: "#ffffff",
+            url: "spot?spotName=qingyuanshan&province=fujian"
         },
         {
             svgPath: targetSVG,
@@ -241,8 +241,8 @@ var fujianDataProvider = {
             title: "土楼",
             latitude: 24.995044,
             longitude: 118.046377,
-            color: "#ffffff"
-            // url: "spot?spotName=tulou&province=fujian"
+            color: "#ffffff",
+            url: "spot?spotName=tulou&province=fujian"
         },
         {
             svgPath: targetSVG,
@@ -251,8 +251,8 @@ var fujianDataProvider = {
             title: "白水洋",
             latitude: 27.070343,
             longitude: 119.058681,
-            color: "#ffffff"
-            // url: "spot?spotName=baishuiyang&province=fujian"
+            color: "#ffffff",
+            url: "spot?spotName=baishuiyang&province=fujian"
         }
     ]
 }
@@ -272,8 +272,8 @@ var guangdongDataProvider = {
             title: "广州",
             latitude: 23.144081,
             longitude: 113.322535,
-            color: "#ffffff"
-            // url: "spot?spotName=guangzhou&province=guangdong"
+            color: "#ffffff",
+            url: "spot?spotName=guangzhou&province=guangdong"
         }
     ]
 }
@@ -293,8 +293,8 @@ var gansuDataProvider = {
             title: "莫高窟",
             latitude: 40.1469394,
             longitude: 94.676005,
-            color: "#ffffff"
-            // url: "spot?spotName=mogaoku&province=gansu"
+            color: "#ffffff",
+            url: "spot?spotName=mogaoku&province=gansu"
         },
         {
             svgPath: targetSVG,
@@ -303,8 +303,8 @@ var gansuDataProvider = {
             title: "麦积山",
             latitude: 34.362784,
             longitude: 106.013269,
-            color: "#ffffff"
-            // url: "spot?spotName=maijishan&province=gansu"
+            color: "#ffffff",
+            url: "spot?spotName=maijishan&province=gansu"
         },
         {
             svgPath: targetSVG,
@@ -313,8 +313,8 @@ var gansuDataProvider = {
             title: "黄河边",
             latitude: 36.070342,
             longitude: 103.837914,
-            color: "#ffffff"
-            // url: "spot?spotName=huanghebian&province=gansu"
+            color: "#ffffff",
+            url: "spot?spotName=huanghebian&province=gansu"
         },
         {
             svgPath: targetSVG,
@@ -323,8 +323,8 @@ var gansuDataProvider = {
             title: "山丹军马场",
             latitude: 36.058927,
             longitude: 103.840358,
-            color: "#ffffff"
-            // url: "spot?spotName=shandanjunmachang&province=gansu"
+            color: "#ffffff",
+            url: "spot?spotName=shandanjunmachang&province=gansu"
         },
         {
             svgPath: targetSVG,
@@ -333,8 +333,8 @@ var gansuDataProvider = {
             title: "官鹅沟",
             latitude: 34.02001,
             longitude: 104.403153,
-            color: "#ffffff"
-            // url: "spot?spotName=guanegou&province=gansu"
+            color: "#ffffff",
+            url: "spot?spotName=guanegou&province=gansu"
         }
     ]
 }
@@ -354,8 +354,8 @@ var guangxiDataProvider = {
             title: "涠洲岛",
             latitude: 21.7481,
             longitude: 109.122884,
-            color: "#ffffff"
-            // url: "spot?spotName=weizhoudao&province=guangxi"
+            color: "#ffffff",
+            url: "spot?spotName=weizhoudao&province=guangxi"
         },
         {
             svgPath: targetSVG,
@@ -364,8 +364,8 @@ var guangxiDataProvider = {
             title: "靖西",
             latitude: 23.140139,
             longitude: 106.424144,
-            color: "#ffffff"
-            // url: "spot?spotName=jingxi&province=guangxi"
+            color: "#ffffff",
+            url: "spot?spotName=jingxi&province=guangxi"
         },
         {
             svgPath: targetSVG,
@@ -374,8 +374,8 @@ var guangxiDataProvider = {
             title: "黄姚古镇",
             latitude: 24.254288,
             longitude: 111.209664,
-            color: "#ffffff"
-            // url: "spot?spotName=huangyaoguzhen&province=guangxi"
+            color: "#ffffff",
+            url: "spot?spotName=huangyaoguzhen&province=guangxi"
         },
         {
             svgPath: targetSVG,
@@ -384,8 +384,8 @@ var guangxiDataProvider = {
             title: "阳朔",
             latitude: 24.737986,
             longitude: 110.492287,
-            color: "#ffffff"
-            // url: "spot?spotName=yangshuo&province=guangxi"
+            color: "#ffffff",
+            url: "spot?spotName=yangshuo&province=guangxi"
         },
         {
             svgPath: targetSVG,
@@ -394,8 +394,8 @@ var guangxiDataProvider = {
             title: "德天瀑布",
             latitude: 22.95696,
             longitude: 106.838493,
-            color: "#ffffff"
-            // url: "spot?spotName=detianpubu&province=guangxi"
+            color: "#ffffff",
+            url: "spot?spotName=detianpubu&province=guangxi"
         }
     ]
 }
@@ -415,8 +415,8 @@ var guizhouDataProvider = {
             title: "织金洞",
             latitude: 26.770667,
             longitude: 105.902441,
-            color: "#ffffff"
-            // url: "spot?spotName=zhijindong&province=guizhou"
+            color: "#ffffff",
+            url: "spot?spotName=zhijindong&province=guizhou"
         },
         {
             svgPath: targetSVG,
@@ -425,8 +425,8 @@ var guizhouDataProvider = {
             title: "万峰林",
             latitude: 25.009011,
             longitude: 104.929696,
-            color: "#ffffff"
-            // url: "spot?spotName=wanfenglin&province=guizhou"
+            color: "#ffffff",
+            url: "spot?spotName=wanfenglin&province=guizhou"
         },
         {
             svgPath: targetSVG,
@@ -435,8 +435,8 @@ var guizhouDataProvider = {
             title: "黄果树瀑布",
             latitude: 25.994852,
             longitude: 105.67645,
-            color: "#ffffff"
-            // url: "spot?spotName=huangguoshupubu&province=guizhou"
+            color: "#ffffff",
+            url: "spot?spotName=huangguoshupubu&province=guizhou"
         },
         {
             svgPath: targetSVG,
@@ -445,8 +445,8 @@ var guizhouDataProvider = {
             title: "六盘水",
             latitude: 26.598729,
             longitude: 104.837036,
-            color: "#ffffff"
-            // url: "spot?spotName=liupanshui&province=guizhou"
+            color: "#ffffff",
+            url: "spot?spotName=liupanshui&province=guizhou"
         },
         {
             svgPath: targetSVG,
@@ -455,8 +455,8 @@ var guizhouDataProvider = {
             title: "遵义会议会址",
             latitude: 27.694506,
             longitude: 106.926188,
-            color: "#ffffff"
-            // url: "spot?spotName=zunyihuiyihuizhi&province=guizhou"
+            color: "#ffffff",
+            url: "spot?spotName=zunyihuiyihuizhi&province=guizhou"
         }
     ]
 }
@@ -476,8 +476,8 @@ var hainanDataProvider = {
             title: "西沙群岛",
             latitude: 18.326870,
             longitude: 109.532934,
-            color: "#ffffff"
-            // url: "spot?spotName=xishaqundao&province=hainan"
+            color: "#ffffff",
+            url: "spot?spotName=xishaqundao&province=hainan"
         },
         {
             svgPath: targetSVG,
@@ -486,8 +486,8 @@ var hainanDataProvider = {
             title: "天涯海角",
             latitude: 18.350306,
             longitude: 109.357845,
-            color: "#ffffff"
-            // url: "spot?spotName=tianyahaijiao&province=hainan"
+            color: "#ffffff",
+            url: "spot?spotName=tianyahaijiao&province=hainan"
         },
         {
             svgPath: targetSVG,
@@ -496,8 +496,8 @@ var hainanDataProvider = {
             title: "亚龙湾",
             latitude: 18.286153,
             longitude: 109.654556,
-            color: "#ffffff"
-            // url: "spot?spotName=yalongwan&province=hainan"
+            color: "#ffffff",
+            url: "spot?spotName=yalongwan&province=hainan"
         },
         {
             svgPath: targetSVG,
@@ -506,8 +506,8 @@ var hainanDataProvider = {
             title: "凤凰岛",
             latitude: 18.307174,
             longitude: 109.585703,
-            color: "#ffffff"
-            // url: "spot?spotName=fenghuangdao&province=hainan"
+            color: "#ffffff",
+            url: "spot?spotName=fenghuangdao&province=hainan"
         },
         {
             svgPath: targetSVG,
@@ -516,8 +516,8 @@ var hainanDataProvider = {
             title: "三沙",
             latitude: 18.671614,
             longitude: 110.146658,
-            color: "#ffffff"
-            // url: "spot?spotName=sansha&province=hainan"
+            color: "#ffffff",
+            url: "spot?spotName=sansha&province=hainan"
         }
     ]
 }
@@ -537,8 +537,8 @@ var hebeiDataProvider = {
             title: "承德避暑山庄",
             latitude: 40.990196,
             longitude: 117.947016,
-            color: "#ffffff"
-            // url: "spot?spotName=chengdebishushanzhuang&province=hebei"
+            color: "#ffffff",
+            url: "spot?spotName=chengdebishushanzhuang&province=hebei"
         },
         {
             svgPath: targetSVG,
@@ -547,8 +547,8 @@ var hebeiDataProvider = {
             title: "白洋淀",
             latitude: 38.947949,
             longitude: 115.973929,
-            color: "#ffffff"
-            // url: "spot?spotName=baiyangdian&province=hebei"
+            color: "#ffffff",
+            url: "spot?spotName=baiyangdian&province=hebei"
         },
         {
             svgPath: targetSVG,
@@ -557,8 +557,8 @@ var hebeiDataProvider = {
             title: "狼牙山",
             latitude: 39.140424,
             longitude: 115.192159,
-            color: "#ffffff"
-            // url: "spot?spotName=langyashan&province=hebei"
+            color: "#ffffff",
+            url: "spot?spotName=langyashan&province=hebei"
         },
         {
             svgPath: targetSVG,
@@ -567,8 +567,8 @@ var hebeiDataProvider = {
             title: "清东陵",
             latitude: 40.291583,
             longitude: 117.645505,
-            color: "#ffffff"
-            // url: "spot?spotName=qingdongling&province=hebei"
+            color: "#ffffff",
+            url: "spot?spotName=qingdongling&province=hebei"
         },
         {
             svgPath: targetSVG,
@@ -577,8 +577,8 @@ var hebeiDataProvider = {
             title: "山海关",
             latitude: 40.085815,
             longitude: 119.605152,
-            color: "#ffffff"
-            // url: "spot?spotName=shanhaiguan&province=hebei"
+            color: "#ffffff",
+            url: "spot?spotName=shanhaiguan&province=hebei"
         }
     ]
 }
@@ -598,8 +598,8 @@ var henanDataProvider = {
             title: "开封",
             latitude: 34.82179,
             longitude: 114.361335,
-            color: "#ffffff"
-            // url: "spot?spotName=kaifeng&province=henan"
+            color: "#ffffff",
+            url: "spot?spotName=kaifeng&province=henan"
         }
     ]
 }
@@ -619,8 +619,8 @@ var hongkongDataProvider = {
             title: "狮子山",
             latitude: 22.355383,
             longitude: 114.199353,
-            color: "#ffffff"
-            // url: "spot?spotName=shizishan&province=hongkong"
+            color: "#ffffff",
+            url: "spot?spotName=shizishan&province=hongkong"
         },
         {
             svgPath: targetSVG,
@@ -629,8 +629,8 @@ var hongkongDataProvider = {
             title: "旺角",
             latitude: 22.322568,
             longitude: 114.18082,
-            color: "#ffffff"
-            // url: "spot?spotName=wangjiao&province=hongkong"
+            color: "#ffffff",
+            url: "spot?spotName=wangjiao&province=hongkong"
         },
         {
             svgPath: targetSVG,
@@ -639,8 +639,8 @@ var hongkongDataProvider = {
             title: "维多利亚港",
             latitude: 22.293582,
             longitude: 114.186117,
-            color: "#ffffff"
-            // url: "spot?spotName=weiduoliyagang&province=hongkong"
+            color: "#ffffff",
+            url: "spot?spotName=weiduoliyagang&province=hongkong"
         },
         {
             svgPath: targetSVG,
@@ -649,8 +649,8 @@ var hongkongDataProvider = {
             title: "迪士尼",
             latitude: 22.303582,
             longitude: 114.186117,
-            color: "#ffffff"
-            // url: "spot?spotName=disney&province=hongkong"
+            color: "#ffffff",
+            url: "spot?spotName=disney&province=hongkong"
         },
         {
             svgPath: targetSVG,
@@ -659,8 +659,8 @@ var hongkongDataProvider = {
             title: "星光大道",
             latitude: 22.296742,
             longitude: 114.180734,
-            color: "#ffffff"
-            // url: "spot?spotName=xingguangdadao&province=hongkong"
+            color: "#ffffff",
+            url: "spot?spotName=xingguangdadao&province=hongkong"
         }
     ]
 }
@@ -680,8 +680,8 @@ var heilongjiangDataProvider = {
             title: "哈尔滨",
             latitude: 45.825269,
             longitude: 126.606233,
-            color: "#ffffff"
-            // url: "spot?spotName=haerbin&province=heilongjiang"
+            color: "#ffffff",
+            url: "spot?spotName=haerbin&province=heilongjiang"
         }
     ]
 }
@@ -701,8 +701,8 @@ var hunanDataProvider = {
             title: "湘西凤凰",
             latitude: 27.953295,
             longitude: 109.607088,
-            color: "#ffffff"
-            // url: "spot?spotName=fenghuang&province=hunan"
+            color: "#ffffff",
+            url: "spot?spotName=fenghuang&province=hunan"
         },
         {
             svgPath: targetSVG,
@@ -711,8 +711,8 @@ var hunanDataProvider = {
             title: "张家界",
             latitude: 29.341552,
             longitude: 110.487993,
-            color: "#ffffff"
-            // url: "spot?spotName=zhangjiajie&province=hunan"
+            color: "#ffffff",
+            url: "spot?spotName=zhangjiajie&province=hunan"
         },
         {
             svgPath: targetSVG,
@@ -721,8 +721,8 @@ var hunanDataProvider = {
             title: "芒果台",
             latitude: 28.24211,
             longitude: 113.051884,
-            color: "#ffffff"
-            // url: "spot?spotName=mangguotai&province=hunan"
+            color: "#ffffff",
+            url: "spot?spotName=mangguotai&province=hunan"
         },
         {
             svgPath: targetSVG,
@@ -731,8 +731,8 @@ var hunanDataProvider = {
             title: "岳麓山",
             latitude: 28.194667,
             longitude: 112.843373,
-            color: "#ffffff"
-            // url: "spot?spotName=yuelushan&province=hunan"
+            color: "#ffffff",
+            url: "spot?spotName=yuelushan&province=hunan"
         },
         {
             svgPath: targetSVG,
@@ -741,8 +741,8 @@ var hunanDataProvider = {
             title: "橘子洲头",
             latitude: 27.97546,
             longitude: 112.96715,
-            color: "#ffffff"
-            // url: "spot?spotName=juzizhoutou&province=hunan"
+            color: "#ffffff",
+            url: "spot?spotName=juzizhoutou&province=hunan"
         }
     ]
 }
@@ -762,8 +762,8 @@ var hubeiDataProvider = {
             title: "黄鹤楼",
             latitude: 30.6041,
             longitude: 114.309053,
-            color: "#ffffff"
-            // url: "spot?spotName=huanghelou&province=hubei"
+            color: "#ffffff",
+            url: "spot?spotName=huanghelou&province=hubei"
         },
         {
             svgPath: targetSVG,
@@ -772,8 +772,8 @@ var hubeiDataProvider = {
             title: "神龙架",
             latitude: 30.6098,
             longitude: 114.420279,
-            color: "#ffffff"
-            // url: "spot?spotName=shenlongjia&province=hubei"
+            color: "#ffffff",
+            url: "spot?spotName=shenlongjia&province=hubei"
         },
         {
             svgPath: targetSVG,
@@ -782,8 +782,8 @@ var hubeiDataProvider = {
             title: "武汉三镇",
             latitude: 30.623842,
             longitude: 114.263643,
-            color: "#ffffff"
-            // url: "spot?spotName=wuhansanzhen&province=hubei"
+            color: "#ffffff",
+            url: "spot?spotName=wuhansanzhen&province=hubei"
         },
         {
             svgPath: targetSVG,
@@ -792,8 +792,8 @@ var hubeiDataProvider = {
             title: "古隆中",
             latitude: 31.9899,
             longitude: 112.0429,
-            color: "#ffffff"
-            // url: "spot?spotName=gulongzhong&province=hubei"
+            color: "#ffffff",
+            url: "spot?spotName=gulongzhong&province=hubei"
         },
         {
             svgPath: targetSVG,
@@ -802,8 +802,8 @@ var hubeiDataProvider = {
             title: "恩施大峡谷",
             latitude: 30.4651,
             longitude: 109.1732,
-            color: "#ffffff"
-            // url: "spot?spotName=enshidaxiagu&province=hubei"
+            color: "#ffffff",
+            url: "spot?spotName=enshidaxiagu&province=hubei"
         }
     ]
 }
@@ -823,8 +823,8 @@ var jilinDataProvider = {
             title: "长白山",
             latitude: 42.125855,
             longitude: 128.079743,
-            color: "#ffffff"
-            // url: "spot?spotName=changbaishan&province=jilin"
+            color: "#ffffff",
+            url: "spot?spotName=changbaishan&province=jilin"
         },
         {
             svgPath: targetSVG,
@@ -833,8 +833,8 @@ var jilinDataProvider = {
             title: "枫叶谷",
             latitude: 42.235855,
             longitude: 128.359743,
-            color: "#ffffff"
-            // url: "spot?spotName=fengyegu&province=jilin"
+            color: "#ffffff",
+            url: "spot?spotName=fengyegu&province=jilin"
         },
         {
             svgPath: targetSVG,
@@ -843,8 +843,8 @@ var jilinDataProvider = {
             title: "松花江",
             latitude: 43.695227,
             longitude: 127.291464,
-            color: "#ffffff"
-            // url: "spot?spotName=songhuajiang&province=jilin"
+            color: "#ffffff",
+            url: "spot?spotName=songhuajiang&province=jilin"
         },
         {
             svgPath: targetSVG,
@@ -853,8 +853,8 @@ var jilinDataProvider = {
             title: "净月潭",
             latitude: 43.80385,
             longitude: 125.465022,
-            color: "#ffffff"
-            // url: "spot?spotName=jingyuetan&province=jilin"
+            color: "#ffffff",
+            url: "spot?spotName=jingyuetan&province=jilin"
         },
         {
             svgPath: targetSVG,
@@ -863,8 +863,8 @@ var jilinDataProvider = {
             title: "图们日光山",
             latitude: 42.929449,
             longitude: 129.725981,
-            color: "#ffffff"
-            // url: "spot?spotName=tumenriguangshan&province=jilin"
+            color: "#ffffff",
+            url: "spot?spotName=tumenriguangshan&province=jilin"
         }
     ]
 }
@@ -884,8 +884,8 @@ var jiangsuDataProvider = {
             title: "南京夫子庙",
             latitude: 32.02697,
             longitude: 118.795398,
-            color: "#ffffff"
-            // url: "spot?spotName=nanjingfuzimiao&province=jiangsu"
+            color: "#ffffff",
+            url: "spot?spotName=nanjingfuzimiao&province=jiangsu"
         },
         {
             svgPath: targetSVG,
@@ -894,8 +894,8 @@ var jiangsuDataProvider = {
             title: "苏州园林",
             latitude: 31.450891,
             longitude: 121.135484,
-            color: "#ffffff"
-            // url: "spot?spotName=suzhouyuanlin&province=jiangsu"
+            color: "#ffffff",
+            url: "spot?spotName=suzhouyuanlin&province=jiangsu"
         },
         {
             svgPath: targetSVG,
@@ -904,8 +904,8 @@ var jiangsuDataProvider = {
             title: "周庄",
             latitude: 31.122667,
             longitude: 120.853932,
-            color: "#ffffff"
-            // url: "spot?spotName=zhouzhuang&province=jiangsu"
+            color: "#ffffff",
+            url: "spot?spotName=zhouzhuang&province=jiangsu"
         },
         {
             svgPath: targetSVG,
@@ -914,8 +914,8 @@ var jiangsuDataProvider = {
             title: "瘦西湖",
             latitude: 32.419989,
             longitude: 119.430517,
-            color: "#ffffff"
-            // url: "spot?spotName=shouxihu&province=jiangsu"
+            color: "#ffffff",
+            url: "spot?spotName=shouxihu&province=jiangsu"
         },
         {
             svgPath: targetSVG,
@@ -924,8 +924,8 @@ var jiangsuDataProvider = {
             title: "明孝陵",
             latitude: 32.056109,
             longitude: 118.84258,
-            color: "#ffffff"
-            // url: "spot?spotName=mingxiaolin&province=jiangsu"
+            color: "#ffffff",
+            url: "spot?spotName=mingxiaolin&province=jiangsu"
         }
     ]
 }
@@ -945,8 +945,8 @@ var jiangxiDataProvider = {
             title: "庐山",
             latitude: 29.359709,
             longitude: 115.990006,
-            color: "#ffffff"
-            // url: "spot?spotName=lushan&province=jiangxi"
+            color: "#ffffff",
+            url: "spot?spotName=lushan&province=jiangxi"
         }
     ]
 }
@@ -966,8 +966,8 @@ var liaoningDataProvider = {
             title: "沈阳故宫",
             latitude: 41.804471,
             longitude: 123.462202,
-            color: "#ffffff"
-            // url: "spot?spotName=shenyanggugong&province=liaoning"
+            color: "#ffffff",
+            url: "spot?spotName=shenyanggugong&province=liaoning"
         },
         {
             svgPath: targetSVG,
@@ -976,8 +976,8 @@ var liaoningDataProvider = {
             title: "红海滩",
             latitude: 42.660088,
             longitude: 124.4042,
-            color: "#ffffff"
-            // url: "spot?spotName=honghaitan&province=liaoning"
+            color: "#ffffff",
+            url: "spot?spotName=honghaitan&province=liaoning"
         },
         {
             svgPath: targetSVG,
@@ -986,8 +986,8 @@ var liaoningDataProvider = {
             title: "鸭绿江",
             latitude: 40.445725,
             longitude: 124.547992,
-            color: "#ffffff"
-            // url: "spot?spotName=yalvjiang&province=liaoning"
+            color: "#ffffff",
+            url: "spot?spotName=yalvjiang&province=liaoning"
         },
         {
             svgPath: targetSVG,
@@ -996,8 +996,8 @@ var liaoningDataProvider = {
             title: "本溪水涧",
             latitude: 41.300994,
             longitude: 123.765378,
-            color: "#ffffff"
-            // url: "spot?spotName=benxishuijian&province=liaoning"
+            color: "#ffffff",
+            url: "spot?spotName=benxishuijian&province=liaoning"
         },
         {
             svgPath: targetSVG,
@@ -1006,8 +1006,8 @@ var liaoningDataProvider = {
             title: "旅顺口",
             latitude: 38.902868,
             longitude: 121.460238,
-            color: "#ffffff"
-            // url: "spot?spotName=lvshunkou&province=liaoning"
+            color: "#ffffff",
+            url: "spot?spotName=lvshunkou&province=liaoning"
         }
     ]
 }
@@ -1027,8 +1027,8 @@ var ningxiaDataProvider = {
             title: "沙坡头",
             latitude: 37.527543,
             longitude: 105.196602,
-            color: "#ffffff"
-            // url: "spot?spotName=shapotou&province=ningxia"
+            color: "#ffffff",
+            url: "spot?spotName=shapotou&province=ningxia"
         },
         {
             svgPath: targetSVG,
@@ -1037,8 +1037,8 @@ var ningxiaDataProvider = {
             title: "沙湖",
             latitude: 38.830482,
             longitude: 106.370657,
-            color: "#ffffff"
-            // url: "spot?spotName=shahu&province=ningxia"
+            color: "#ffffff",
+            url: "spot?spotName=shahu&province=ningxia"
         },
         {
             svgPath: targetSVG,
@@ -1047,8 +1047,8 @@ var ningxiaDataProvider = {
             title: "贺兰山",
             latitude: 38.996932,
             longitude: 106.398503,
-            color: "#ffffff"
-            // url: "spot?spotName=helanshan&province=ningxia"
+            color: "#ffffff",
+            url: "spot?spotName=helanshan&province=ningxia"
         },
         {
             svgPath: targetSVG,
@@ -1057,8 +1057,8 @@ var ningxiaDataProvider = {
             title: "青铜峡",
             latitude: 37.924455,
             longitude: 105.93861,
-            color: "#ffffff"
-            // url: "spot?spotName=qingtongxia&province=ningxia"
+            color: "#ffffff",
+            url: "spot?spotName=qingtongxia&province=ningxia"
         },
         {
             svgPath: targetSVG,
@@ -1067,8 +1067,8 @@ var ningxiaDataProvider = {
             title: "海原",
             latitude: 36.573821,
             longitude: 105.664661,
-            color: "#ffffff"
-            // url: "spot?spotName=haiyuan&province=ningxia"
+            color: "#ffffff",
+            url: "spot?spotName=haiyuan&province=ningxia"
         }
     ]
 }
@@ -1088,8 +1088,8 @@ var qinghaiDataProvider = {
             title: "青海湖",
             latitude: 36.805245,
             longitude: 100.284377,
-            color: "#ffffff"
-            // url: "spot?spotName=qinghaihu&province=qinghai"
+            color: "#ffffff",
+            url: "spot?spotName=qinghaihu&province=qinghai"
         },
         {
             svgPath: targetSVG,
@@ -1098,8 +1098,8 @@ var qinghaiDataProvider = {
             title: "可可西里",
             latitude: 36.633084,
             longitude: 101.780888,
-            color: "#ffffff"
-            // url: "spot?spotName=kekexili&province=qinghai"
+            color: "#ffffff",
+            url: "spot?spotName=kekexili&province=qinghai"
         },
         {
             svgPath: targetSVG,
@@ -1108,8 +1108,8 @@ var qinghaiDataProvider = {
             title: "唐古拉山口",
             latitude: 33.08648,
             longitude: 91.925691,
-            color: "#ffffff"
-            // url: "spot?spotName=tanggulashankou&province=qinghai"
+            color: "#ffffff",
+            url: "spot?spotName=tanggulashankou&province=qinghai"
         },
         {
             svgPath: targetSVG,
@@ -1118,8 +1118,8 @@ var qinghaiDataProvider = {
             title: "西宁塔尔寺",
             latitude: 36.294459,
             longitude: 101.576298,
-            color: "#ffffff"
-            // url: "spot?spotName=xiningtaersi&province=qinghai"
+            color: "#ffffff",
+            url: "spot?spotName=xiningtaersi&province=qinghai"
         },
         {
             svgPath: targetSVG,
@@ -1128,8 +1128,8 @@ var qinghaiDataProvider = {
             title: "祁连山",
             latitude: 36.449881,
             longitude: 101.609618,
-            color: "#ffffff"
-            // url: "spot?spotName=qilianshan&province=qinghai"
+            color: "#ffffff",
+            url: "spot?spotName=qilianshan&province=qinghai"
         }
     ]
 }
@@ -1150,8 +1150,8 @@ var shaanxiDataProvider = {
             title: "大唐芙蓉园",
             latitude: 34.218454,
             longitude: 108.980379,
-            color: "#ffffff"
-            // url: "spot?spotName=datangfurongyuan&province=shaanxi"
+            color: "#ffffff",
+            url: "spot?spotName=datangfurongyuan&province=shaanxi"
         },
         {
             svgPath: targetSVG,
@@ -1160,8 +1160,8 @@ var shaanxiDataProvider = {
             title: "华清池",
             latitude: 34.370442,
             longitude: 109.219934,
-            color: "#ffffff"
-            // url: "spot?spotName=huaqingchi&province=shaanxi"
+            color: "#ffffff",
+            url: "spot?spotName=huaqingchi&province=shaanxi"
         },
         {
             svgPath: targetSVG,
@@ -1170,8 +1170,8 @@ var shaanxiDataProvider = {
             title: "宝塔山",
             latitude: 36.600141,
             longitude: 109.5032,
-            color: "#ffffff"
-            // url: "spot?spotName=baotashan&province=shaanxi"
+            color: "#ffffff",
+            url: "spot?spotName=baotashan&province=shaanxi"
         },
         {
             svgPath: targetSVG,
@@ -1180,8 +1180,8 @@ var shaanxiDataProvider = {
             title: "陕北窑洞",
             latitude: 38.213773,
             longitude: 109.697575,
-            color: "#ffffff"
-            // url: "spot?spotName=shanbeiyaodong&province=shaanxi"
+            color: "#ffffff",
+            url: "spot?spotName=shanbeiyaodong&province=shaanxi"
         },
         {
             svgPath: targetSVG,
@@ -1190,8 +1190,8 @@ var shaanxiDataProvider = {
             title: "华山",
             latitude: 34.532242,
             longitude: 110.088712,
-            color: "#ffffff"
-            // url: "spot?spotName=huashan&province=shaanxi"
+            color: "#ffffff",
+            url: "spot?spotName=huashan&province=shaanxi"
         }
     ]
 }
@@ -1211,8 +1211,8 @@ var sichuanDataProvider = {
             title: "稻城亚丁",
             latitude: 28.453275,
             longitude: 100.357569,
-            color: "#ffffff"
-            // url: "spot?spotName=daochengyading&province=sichuan"
+            color: "#ffffff",
+            url: "spot?spotName=daochengyading&province=sichuan"
         },
         {
             svgPath: targetSVG,
@@ -1221,8 +1221,8 @@ var sichuanDataProvider = {
             title: "贡嘎山",
             latitude: 29.605606,
             longitude: 102.071809,
-            color: "#ffffff"
-            // url: "spot?spotName=gonggashan&province=sichuan"
+            color: "#ffffff",
+            url: "spot?spotName=gonggashan&province=sichuan"
         },
         {
             svgPath: targetSVG,
@@ -1231,8 +1231,8 @@ var sichuanDataProvider = {
             title: "九寨黄龙",
             latitude: 32.856883,
             longitude: 103.694724,
-            color: "#ffffff"
-            // url: "spot?spotName=jiuzhaihuanglong&province=sichuan"
+            color: "#ffffff",
+            url: "spot?spotName=jiuzhaihuanglong&province=sichuan"
         },
         {
             svgPath: targetSVG,
@@ -1241,8 +1241,8 @@ var sichuanDataProvider = {
             title: "四姑娘山",
             latitude: 31.127544,
             longitude: 102.836032,
-            color: "#ffffff"
-            // url: "spot?spotName=siguniangshan&province=sichuan"
+            color: "#ffffff",
+            url: "spot?spotName=siguniangshan&province=sichuan"
         },
         {
             svgPath: targetSVG,
@@ -1251,8 +1251,8 @@ var sichuanDataProvider = {
             title: "阆中古城",
             latitude: 31.577161,
             longitude: 105.985006,
-            color: "#ffffff"
-            // url: "spot?spotName=langzhonggucheng&province=sichuan"
+            color: "#ffffff",
+            url: "spot?spotName=langzhonggucheng&province=sichuan"
         }
     ]
 }
@@ -1272,8 +1272,8 @@ var shandongDataProvider = {
             title: "崂山",
             latitude: 36.227996,
             longitude: 120.6136,
-            color: "#ffffff"
-            // url: "spot?spotName=laoshan&province=shandong"
+            color: "#ffffff",
+            url: "spot?spotName=laoshan&province=shandong"
         },
         {
             svgPath: targetSVG,
@@ -1282,8 +1282,8 @@ var shandongDataProvider = {
             title: "大明湖",
             latitude: 36.678757,
             longitude: 117.022994,
-            color: "#ffffff"
-            // url: "spot?spotName=daminghu&province=shandong"
+            color: "#ffffff",
+            url: "spot?spotName=daminghu&province=shandong"
         },
         {
             svgPath: targetSVG,
@@ -1292,8 +1292,8 @@ var shandongDataProvider = {
             title: "日照海滩",
             latitude: 35.553489,
             longitude: 119.485457,
-            color: "#ffffff"
-            // url: "spot?spotName=rizhaohaitan&province=shandong"
+            color: "#ffffff",
+            url: "spot?spotName=rizhaohaitan&province=shandong"
         },
         {
             svgPath: targetSVG,
@@ -1302,8 +1302,8 @@ var shandongDataProvider = {
             title: "趵突泉",
             latitude: 36.767808,
             longitude: 117.12264,
-            color: "#ffffff"
-            // url: "spot?spotName=baotuquan&province=shandong"
+            color: "#ffffff",
+            url: "spot?spotName=baotuquan&province=shandong"
         },
         {
             svgPath: targetSVG,
@@ -1312,8 +1312,8 @@ var shandongDataProvider = {
             title: "泰山",
             latitude: 36.218182,
             longitude: 117.126518,
-            color: "#ffffff"
-            // url: "spot?spotName=taishan&province=shandong"
+            color: "#ffffff",
+            url: "spot?spotName=taishan&province=shandong"
         }
     ]
 }
@@ -1333,8 +1333,8 @@ var shanghaiDataProvider = {
             title: "豫园",
             latitude: 31.232818,
             longitude: 121.498985,
-            color: "#ffffff"
-            // url: "spot?spotName=yuyuan&province=shanghai"
+            color: "#ffffff",
+            url: "spot?spotName=yuyuan&province=shanghai"
         },
         {
             svgPath: targetSVG,
@@ -1343,8 +1343,8 @@ var shanghaiDataProvider = {
             title: "淀山湖",
             latitude: 31.072676,
             longitude: 120.938188,
-            color: "#ffffff"
-            // url: "spot?spotName=dianshanhu&province=shanghai"
+            color: "#ffffff",
+            url: "spot?spotName=dianshanhu&province=shanghai"
         },
         {
             svgPath: targetSVG,
@@ -1353,8 +1353,8 @@ var shanghaiDataProvider = {
             title: "田子坊",
             latitude: 31.214244,
             longitude: 121.475563,
-            color: "#ffffff"
-            // url: "spot?spotName=tianzifang&province=shanghai"
+            color: "#ffffff",
+            url: "spot?spotName=tianzifang&province=shanghai"
         },
         {
             svgPath: targetSVG,
@@ -1363,8 +1363,8 @@ var shanghaiDataProvider = {
             title: "外滩",
             latitude: 31.146473,
             longitude: 121.497516,
-            color: "#ffffff"
-            // url: "spot?spotName=waitan&province=shanghai"
+            color: "#ffffff",
+            url: "spot?spotName=waitan&province=shanghai"
         },
         {
             svgPath: targetSVG,
@@ -1373,8 +1373,8 @@ var shanghaiDataProvider = {
             title: "世纪公园",
             latitude: 30.926148,
             longitude: 121.526039,
-            color: "#ffffff"
-            // url: "spot?spotName=shijigongyuan&province=shanghai"
+            color: "#ffffff",
+            url: "spot?spotName=shijigongyuan&province=shanghai"
         }
     ]
 }
@@ -1394,8 +1394,8 @@ var shanxiDataProvider = {
             title: "五台山",
             latitude: 38.98439,
             longitude: 113.596375,
-            color: "#ffffff"
-            // url: "spot?spotName=wutaishan&province=shanxi"
+            color: "#ffffff",
+            url: "spot?spotName=wutaishan&province=shanxi"
         },
         {
             svgPath: targetSVG,
@@ -1404,8 +1404,8 @@ var shanxiDataProvider = {
             title: "壶口瀑布",
             latitude: 36.151234,
             longitude: 110.555575,
-            color: "#ffffff"
-            // url: "spot?spotName=hukoupubu&province=shanxi"
+            color: "#ffffff",
+            url: "spot?spotName=hukoupubu&province=shanxi"
         },
         {
             svgPath: targetSVG,
@@ -1414,8 +1414,8 @@ var shanxiDataProvider = {
             title: "老顶山",
             latitude: 36.197586,
             longitude: 113.172256,
-            color: "#ffffff"
-            // url: "spot?spotName=laodingshan&province=shanxi"
+            color: "#ffffff",
+            url: "spot?spotName=laodingshan&province=shanxi"
         },
         {
             svgPath: targetSVG,
@@ -1424,8 +1424,8 @@ var shanxiDataProvider = {
             title: "平遥",
             latitude: 37.21041,
             longitude: 112.190081,
-            color: "#ffffff"
-            // url: "spot?spotName=pingyao&province=shanxi"
+            color: "#ffffff",
+            url: "spot?spotName=pingyao&province=shanxi"
         },
         {
             svgPath: targetSVG,
@@ -1434,8 +1434,8 @@ var shanxiDataProvider = {
             title: "乔家大院",
             latitude: 37.411224,
             longitude: 112.446017,
-            color: "#ffffff"
-            // url: "spot?spotName=qiaojiadayuan&province=shanxi"
+            color: "#ffffff",
+            url: "spot?spotName=qiaojiadayuan&province=shanxi"
         }
     ]
 }
@@ -1455,8 +1455,8 @@ var tianjinDataProvider = {
             title: "天津眼",
             latitude: 39.360023,
             longitude: 117.193411,
-            color: "#ffffff"
-            // url: "spot?spotName=tianjinyan&province=tianjin"
+            color: "#ffffff",
+            url: "spot?spotName=tianjinyan&province=tianjin"
         },
         {
             svgPath: targetSVG,
@@ -1465,8 +1465,8 @@ var tianjinDataProvider = {
             title: "五大道",
             latitude: 39.118936,
             longitude: 117.219563,
-            color: "#ffffff"
-            // url: "spot?spotName=wudadao&province=tianjin"
+            color: "#ffffff",
+            url: "spot?spotName=wudadao&province=tianjin"
         },
         {
             svgPath: targetSVG,
@@ -1475,8 +1475,8 @@ var tianjinDataProvider = {
             title: "意式风情街",
             latitude: 39.191256,
             longitude: 117.205585,
-            color: "#ffffff"
-            // url: "spot?spotName=yishifengqingjie&province=tianjin"
+            color: "#ffffff",
+            url: "spot?spotName=yishifengqingjie&province=tianjin"
         },
         {
             svgPath: targetSVG,
@@ -1485,8 +1485,8 @@ var tianjinDataProvider = {
             title: "塘沽炮台",
             latitude: 38.983338,
             longitude: 117.716282,
-            color: "#ffffff"
-            // url: "spot?spotName=tanggpaotai&province=tianjin"
+            color: "#ffffff",
+            url: "spot?spotName=tanggpaotai&province=tianjin"
         },
         {
             svgPath: targetSVG,
@@ -1495,8 +1495,8 @@ var tianjinDataProvider = {
             title: "古文化街",
             latitude: 39.251707,
             longitude: 117.197497,
-            color: "#ffffff"
-            // url: "spot?spotName=guwenhuajie&province=tianjin"
+            color: "#ffffff",
+            url: "spot?spotName=guwenhuajie&province=tianjin"
         }
     ]
 }
@@ -1516,8 +1516,8 @@ var taiwanDataProvider = {
             title: "鹿港小镇",
             latitude: 24.051796,
             longitude: 120.516135,
-            color: "#ffffff"
-            // url: "spot?spotName=lugangxiaozhen&province=taiwan"
+            color: "#ffffff",
+            url: "spot?spotName=lugangxiaozhen&province=taiwan"
         },
         {
             svgPath: targetSVG,
@@ -1526,8 +1526,8 @@ var taiwanDataProvider = {
             title: "渔人码头",
             latitude: 25.012687,
             longitude: 121.481323,
-            color: "#ffffff"
-            // url: "spot?spotName=yurenmatou&province=taiwan"
+            color: "#ffffff",
+            url: "spot?spotName=yurenmatou&province=taiwan"
         },
         {
             svgPath: targetSVG,
@@ -1536,8 +1536,8 @@ var taiwanDataProvider = {
             title: "情人桥",
             latitude: 25.122801,
             longitude: 121.487674,
-            color: "#ffffff"
-            // url: "spot?spotName=qingrenqiao&province=taiwan"
+            color: "#ffffff",
+            url: "spot?spotName=qingrenqiao&province=taiwan"
         },
         {
             svgPath: targetSVG,
@@ -1546,8 +1546,8 @@ var taiwanDataProvider = {
             title: "日月潭",
             latitude: 23.847418,
             longitude: 120.924521,
-            color: "#ffffff"
-            // url: "spot?spotName=riyuetan&province=taiwan"
+            color: "#ffffff",
+            url: "spot?spotName=riyuetan&province=taiwan"
         },
         {
             svgPath: targetSVG,
@@ -1556,8 +1556,8 @@ var taiwanDataProvider = {
             title: "西门町",
             latitude: 24.842612,
             longitude: 121.508983,
-            color: "#ffffff"
-            // url: "spot?spotName=ximenting&province=taiwan"
+            color: "#ffffff",
+            url: "spot?spotName=ximenting&province=taiwan"
         }
     ]
 }
@@ -1577,8 +1577,8 @@ var xinjiangDataProvider = {
             title: "火焰山",
             latitude: 42.947613,
             longitude: 89.184074,
-            color: "#ffffff"
-            // url: "spot?spotName=huoyanshan&province=xinjiang"
+            color: "#ffffff",
+            url: "spot?spotName=huoyanshan&province=xinjiang"
         },
         {
             svgPath: targetSVG,
@@ -1587,8 +1587,8 @@ var xinjiangDataProvider = {
             title: "天山",
             latitude: 43.478818,
             longitude: 93.12248,
-            color: "#ffffff"
-            // url: "spot?spotName=tianshan&province=xinjiang"
+            color: "#ffffff",
+            url: "spot?spotName=tianshan&province=xinjiang"
         },
         {
             svgPath: targetSVG,
@@ -1597,8 +1597,8 @@ var xinjiangDataProvider = {
             title: "天池",
             latitude: 43.894016,
             longitude: 88.139294,
-            color: "#ffffff"
-            // url: "spot?spotName=tianchi&province=xinjiang"
+            color: "#ffffff",
+            url: "spot?spotName=tianchi&province=xinjiang"
         },
         {
             svgPath: targetSVG,
@@ -1607,8 +1607,8 @@ var xinjiangDataProvider = {
             title: "吐鲁番盆地",
             latitude: 39.010194,
             longitude: 88.115186,
-            color: "#ffffff"
-            // url: "spot?spotName=tulufanpendi&province=xinjiang"
+            color: "#ffffff",
+            url: "spot?spotName=tulufanpendi&province=xinjiang"
         },
         {
             svgPath: targetSVG,
@@ -1617,8 +1617,8 @@ var xinjiangDataProvider = {
             title: "那拉提草原",
             latitude: 43.298696,
             longitude: 84.235381,
-            color: "#ffffff"
-            // url: "spot?spotName=nalaticaoyuan&province=xinjiang"
+            color: "#ffffff",
+            url: "spot?spotName=nalaticaoyuan&province=xinjiang"
         }
     ]
 }
@@ -1638,8 +1638,8 @@ var xizangDataProvider = {
             title: "布达拉宫",
             latitude: 29.661235,
             longitude: 91.124882,
-            color: "#ffffff"
-            // url: "spot?spotName=budalagong&province=xizang"
+            color: "#ffffff",
+            url: "spot?spotName=budalagong&province=xizang"
         },
         {
             svgPath: targetSVG,
@@ -1648,8 +1648,8 @@ var xizangDataProvider = {
             title: "雅鲁藏布大峡谷",
             latitude: 29.517885,
             longitude: 94.888588,
-            color: "#ffffff"
-            // url: "spot?spotName=yaluzangbudaxiagu&province=xizang"
+            color: "#ffffff",
+            url: "spot?spotName=yaluzangbudaxiagu&province=xizang"
         },
         {
             svgPath: targetSVG,
@@ -1658,8 +1658,8 @@ var xizangDataProvider = {
             title: "纳木错",
             latitude: 30.815301,
             longitude: 90.903403,
-            color: "#ffffff"
-            // url: "spot?spotName=namucuo&province=xizang"
+            color: "#ffffff",
+            url: "spot?spotName=namucuo&province=xizang"
         },
         {
             svgPath: targetSVG,
@@ -1668,8 +1668,8 @@ var xizangDataProvider = {
             title: "喜马拉雅山",
             latitude: 28.190454,
             longitude: 86.934165,
-            color: "#ffffff"
-            // url: "spot?spotName=ximalayashan&province=xizang"
+            color: "#ffffff",
+            url: "spot?spotName=ximalayashan&province=xizang"
         },
         {
             svgPath: targetSVG,
@@ -1678,8 +1678,8 @@ var xizangDataProvider = {
             title: "墨脱",
             latitude: 29.330941,
             longitude: 95.339636,
-            color: "#ffffff"
-            // url: "spot?spotName=motuo&province=xizang"
+            color: "#ffffff",
+            url: "spot?spotName=motuo&province=xizang"
         }
     ]
 }
@@ -1699,8 +1699,8 @@ var yunnanDataProvider = {
             title: "束河古镇",
             latitude: 26.922349,
             longitude: 100.411847,
-            color: "#ffffff"
-            // url: "spot?spotName=shuheguzhen&province=yunnan"
+            color: "#ffffff",
+            url: "spot?spotName=shuheguzhen&province=yunnan"
         },
         {
             svgPath: targetSVG,
@@ -1709,8 +1709,8 @@ var yunnanDataProvider = {
             title: "纳帕海",
             latitude: 27.830176,
             longitude: 99.652939,
-            color: "#ffffff"
-            // url: "spot?spotName=napahai&province=yunnan"
+            color: "#ffffff",
+            url: "spot?spotName=napahai&province=yunnan"
         },
         {
             svgPath: targetSVG,
@@ -1719,8 +1719,8 @@ var yunnanDataProvider = {
             title: "拉市海",
             latitude: 26.881481,
             longitude: 100.140759,
-            color: "#ffffff"
-            // url: "spot?spotName=lashihai&province=yunnan"
+            color: "#ffffff",
+            url: "spot?spotName=lashihai&province=yunnan"
         },
         {
             svgPath: targetSVG,
@@ -1729,8 +1729,8 @@ var yunnanDataProvider = {
             title: "版纳野象谷",
             latitude: 22.175621,
             longitude: 100.865759,
-            color: "#ffffff"
-            // url: "spot?spotName=bannayexianggu&province=yunnan"
+            color: "#ffffff",
+            url: "spot?spotName=bannayexianggu&province=yunnan"
         },
         {
             svgPath: targetSVG,
@@ -1739,8 +1739,8 @@ var yunnanDataProvider = {
             title: "香格里拉",
             latitude: 27.195023,
             longitude: 100.120735,
-            color: "#ffffff"
-            // url: "spot?spotName=xianggelila&province=yunnan"
+            color: "#ffffff",
+            url: "spot?spotName=xianggelila&province=yunnan"
         }
     ]
 }
@@ -1760,8 +1760,8 @@ var zhejiangDataProvider = {
             title: "千岛湖",
             latitude: 29.61001,
             longitude: 119.051449,
-            color: "#ffffff"
-            // url: "spot?spotName=qiandaohu&province=zhejiang"
+            color: "#ffffff",
+            url: "spot?spotName=qiandaohu&province=zhejiang"
         },
         {
             svgPath: targetSVG,
@@ -1770,8 +1770,8 @@ var zhejiangDataProvider = {
             title: "乌镇",
             latitude: 30.65454,
             longitude: 120.494407,
-            color: "#ffffff"
-            // url: "spot?spotName=wuzhen&province=zhejiang"
+            color: "#ffffff",
+            url: "spot?spotName=wuzhen&province=zhejiang"
         },
         {
             svgPath: targetSVG,
@@ -1780,8 +1780,8 @@ var zhejiangDataProvider = {
             title: "西塘",
             latitude: 30.563449,
             longitude: 120.544605,
-            color: "#ffffff"
-            // url: "spot?spotName=xitang&province=zhejiang"
+            color: "#ffffff",
+            url: "spot?spotName=xitang&province=zhejiang"
         },
         {
             svgPath: targetSVG,
@@ -1790,8 +1790,8 @@ var zhejiangDataProvider = {
             title: "西湖",
             latitude: 30.251772,
             longitude: 120.139058,
-            color: "#ffffff"
-            // url: "spot?spotName=xihu&province=zhejiang"
+            color: "#ffffff",
+            url: "spot?spotName=xihu&province=zhejiang"
         },
         {
             svgPath: targetSVG,
@@ -1800,8 +1800,8 @@ var zhejiangDataProvider = {
             title: "宁波",
             latitude: 29.86887,
             longitude: 121.544014,
-            color: "#ffffff"
-            // url: "spot?spotName=ningbo&province=zhejiang"
+            color: "#ffffff",
+            url: "spot?spotName=ningbo&province=zhejiang"
         }
     ]
 }

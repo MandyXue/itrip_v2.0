@@ -232,7 +232,7 @@
                                                 <h4 class="modal-title" id="pictureLabel">${uploadEntities.spotfood}</h4>
                                             </div>
                                             <div class="modal-body">
-                                                <img class="img-responsive" src="${bp}/${uploadEntities.pictures}">
+                                                <img class="img-responsive" src="${bp}/upload/${uploadEntities.pictures}">
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
