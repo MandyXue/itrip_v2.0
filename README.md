@@ -10,7 +10,7 @@ refactor using springmvc+jpa
 ### 1. Add the six tables from the sql files to a new schema called itrip
 In this part we use local mysql workbench to configure our database.
 
-### 2. Clone this project to your file and wait for the dependencies to generate(better use vpn). After that, link the database to our itrip database:
+#### 2. Clone this project to your file and wait for the dependencies to generate(better use vpn). After that, link the database to our itrip database:
 * Open the database tab-bar
 * Press the add button
 * Choose 'Data Source -> MySQL'
@@ -24,19 +24,19 @@ localhost
 ```
 * Database:
 ```
-itrip
-```(the same as your database name)
-* Url:
+itrip(the same as your database name)
+```
+* Url:(This is usually generated automatically)
 ```
 jdbc:mysql://localhost:3306/itrip
-```(This is usually generated automatically)
+```
 * User and Password is just as your database
 
-### 3. Generate the java persistence unit from the tool buttons on the left. 
+#### 3. Generate the java persistence unit from the tool buttons on the left. 
 * Use the default name of entities is enough.
 * Just choose all the tables from mysql database.
 
-### 4. Make sure to configure the persistense.xml correnctly:
+#### 4. Make sure to configure the persistense.xml correnctly:
 * First, add ```?characterEncoding=utf-8``` to your database as follows:
 ```
 <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/itrip?characterEncoding=utf-8"/>
@@ -50,7 +50,7 @@ jdbc:mysql://localhost:3306/itrip
 <property name="eclipselink.jdbc.password" value="password"/>
 ```
 
-### 5. Add three constructors of UploadEntity, UserFoodEntity and UserSpotEntity:
+#### 5. Add three constructors of UploadEntity, UserFoodEntity and UserSpotEntity:
 ```Java
 public UploadEntity(String username,  String spotfood, String pictures, String description) {
 	this.username = username;
@@ -64,7 +64,7 @@ public UploadEntity(String username,  String spotfood, String pictures, String d
 public UploadEntity() {
 }
 ```
-```
+```Java
 public UserFoodEntity(String username, String foodname, Date date) {
     this.username = username;
     this.foodname = foodname;
@@ -85,8 +85,8 @@ public UserSpotEntity() {
 }
 ```
 
-### 6. Then you can deploy and run our program.
+#### 6. Then you can deploy and run our program.
 
-### 7. While running, if you use Mac, to make sure the upload function right, please check if there exists an ”upload” folder at the location: %tomcat%/webapps/project, if not, please new a folder called “upload”.
+#### 7. While running, if you use Mac, to make sure the upload function right, please check if there exists an ”upload” folder at the location: %tomcat%/webapps/project, if not, please new a folder called “upload”.
 
-### 8. Finally, enjoy your time in iTrip and have fun.
+#### 8. Finally, enjoy your time in iTrip and have fun.
