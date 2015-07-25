@@ -6,26 +6,81 @@ refactor using springmvc+jpa
 
 * Our project is named as ‘i-Trip’, offering two user status, registered user and unregistered user.  We provide functions including target area choosing, picture exhibition and uploading, food exhibition and uploading, thumbs-up and other preference choice. What’s more, for registered users, we make sure that they can check their personal preference of tourism and upload their pictures of specified tourism.
 
-## Implemented Functions
-### Part I: Database Management
-To successfully support our project, we design our database as the E-R diagram showing. Two relationship sets named user-trip and user-food and a single entity named upload, responsible for different functions.
+## Configurations and Deployments
+### 1. Add the six tables from the sql files to a new schema called itrip
+In this part we use local mysql workbench to configure our database.
 
-#### 1.	Entity Sets for itrip database:
-*	The spot entity,with attributes spots_name,spots_cn_name, province, description, thumb-package, thumb-couple, thumb-family.
-*	The user entity, with attributes username, password, email.
-*	The food entity, with attributes food_name, food_n_name, province, description.
-*	The upload entity, with attributes pvalid, dvalid, description, pictures, spotted, username.
+### 2. Clone this project to your file and wait for the dependencies to generate(better use vpn). After that, link the database to our itrip database:
+* Open the database tab-bar
+* Press the add button
+* Choose 'Data Source -> MySQL'
+* Host: 
+```
+localhost
+```
+* Port:
+```
+3306
+```
+* Database:
+```
+itrip
+```(the same as your database name)
+* Url:
+```
+jdbc:mysql://localhost:3306/itrip
+```(This is usually generated automatically)
+* User and Password is just as your database
 
-#### 2.	Relationship Sets for itrip database:
-*	User-trip,a many to many relationship set between spot and user
+### 3. Generate the java persistence unit from the tool buttons on the left. 
+* Use the default name of entities is enough.
+* Just choose all the tables from mysql database.
 
-User-trip relationship set consists of two entity named spot and user. Spot stores the information  about the spot detail information including several aspects shown in the picture. User contains 3 attributes mainly being invoked when login validation and register. User and spot are many to many connection when user login or register.
+### 4. Make sure to configure the persistense.xml correnctly:
+* First, add ```?characterEncoding=utf-8``` to your database as follows:
+```
+<property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/itrip?characterEncoding=utf-8"/>
+```
 
-*	User-food, a many to many relationship set between food and user
-User-food relationship set consists of two entity as well and we define them as food and user(user entity is included in two relationship sets). Food stores the information about the food detail information including 4 aspects as attributes and to be connected with user with many to many restraints when login and register. 
+* Second, configure your database, for example:
+```
+<property name="eclipselink.jdbc.user" value="root"/>
+```
+```
+<property name="eclipselink.jdbc.password" value="password"/>
+```
 
-* Also, to make our functions more easy-available. We  provide a single entity upload to help allow the users to upload their individual pictures and  description of a spot so that more interaction are among the users.
+### 5. Add three constructors of UploadEntity, UserFoodEntity and UserSpotEntity:
+```Java
+public UploadEntity(String username,  String spotfood, String pictures, String description) {
+	this.username = username;
+	this.dvalid = 0;
+	this.spotfood = spotfood;
+	this.pictures = pictures;
+	this.pvalid = 0;
+	this.description = description;
+}
 
-### Part II: Framework and basic pages
+public UploadEntity() {
+}
+```
+```
+public UserFoodEntity(String username, String foodname, Date date) {
+    this.username = username;
+    this.foodname = foodname;
+    this.date = date;
+}
 
-unfinished.....
+public UserFoodEntity() {
+}
+```
+```Java
+public UserSpotEntity(String username, String spotname, Date date, String type) {
+	this.username = username;
+	this.spotname = spotname;
+	this.date = date;
+	this.type = type;
+}
+public UserSpotEntity() {
+}
+```
