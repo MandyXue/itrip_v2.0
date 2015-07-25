@@ -1,4 +1,4 @@
-# itrip-refactor
+# iTrip
 refactor using springmvc+jpa
 
 ## Introduction
@@ -84,3 +84,9 @@ public UserSpotEntity(String username, String spotname, Date date, String type) 
 public UserSpotEntity() {
 }
 ```
+
+### 6. Then you can deploy and run our program.
+
+### 7. While running, if you use Mac, to make sure the upload function right, please check if there exists an ”upload” folder at the location: %tomcat%/webapps/project, if not, please new a folder called “upload”.
+
+### 8. Finally, enjoy your time in iTrip and have fun.
